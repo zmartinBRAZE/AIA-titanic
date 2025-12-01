@@ -1,0 +1,892 @@
+PassengerId,Survived,TicketClass,Name,Sex,Age,SibSp,ParCh,Fare,Embarked,Title,Train/Test Group
+500,0,3,"Svensson, Mr. Olof",male,24,0,0,7.8,S,Mr.,Test
+331,1,3,"McCoy, Miss. Agnes",female,29.7,2,0,23.25,Q,Miss,Test
+542,0,3,"Andersson, Miss. Ingeborg Constanzia",female,9,4,2,31.28,S,Miss,Test
+256,1,3,"Touma, Mrs. Darwis (Hanne Youssef Razi)",female,29,0,2,15.25,C,Mrs.,Test
+611,0,3,"Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren)",female,39,1,5,31.28,S,Mrs.,Train
+343,0,2,"Collander, Mr. Erik Gustaf",male,28,0,0,13,S,Mr.,Train
+636,1,2,"Davis, Miss. Mary",female,28,0,0,13,S,Miss,Train
+78,0,3,"Moutal, Mr. Rahamin Haim",male,29.7,0,0,8.05,S,Mr.,Train
+561,0,3,"Morrow, Mr. Thomas Rowan",male,29.7,0,0,7.75,Q,Mr.,Train
+220,0,2,"Harris, Mr. Walter",male,30,0,0,10.5,S,Mr.,Train
+454,1,1,"Goldenberg, Mr. Samuel L",male,49,1,0,89.1,C,Mr.,Train
+752,1,3,"Moor, Master. Meier",male,6,0,1,12.48,S,Master,Train
+860,0,3,"Razi, Mr. Raihed",male,29.7,0,0,7.23,C,Mr.,Train
+864,0,3,"Sage, Miss. Dorothy Edith ""Dolly""",female,29.7,8,2,69.55,S,Miss,Train
+820,0,3,"Skoog, Master. Karl Thorsten",male,10,3,2,27.9,S,Master,Train
+157,1,3,"Gilnagh, Miss. Katherine ""Katie""",female,16,0,0,7.73,Q,Miss,Test
+325,0,3,"Sage, Mr. George John Jr",male,29.7,8,2,69.55,S,Mr.,Train
+4,1,1,"Futrelle, Mrs. Jacques Heath (Lily May Peel)",female,35,1,0,53.1,S,Mrs.,Train
+666,0,2,"Hickman, Mr. Lewis",male,32,2,0,73.5,S,Mr.,Train
+381,1,1,"Bidois, Miss. Rosalie",female,42,0,0,227.53,C,Miss,Train
+539,0,3,"Risien, Mr. Samuel Beard",male,29.7,0,0,14.5,S,Mr.,Train
+70,0,3,"Kink, Mr. Vincenz",male,26,2,0,8.66,S,Mr.,Train
+609,1,2,"Laroche, Mrs. Joseph (Juliette Marie Louise Lafargue)",female,22,1,2,41.58,C,Mrs.,Train
+684,0,3,"Goodwin, Mr. Charles Edward",male,14,5,2,46.9,S,Mr.,Test
+614,0,3,"Horgan, Mr. John",male,29.7,0,0,7.75,Q,Mr.,Train
+718,1,2,"Troutt, Miss. Edwina Celia ""Winnie""",female,27,0,0,10.5,S,Miss,Train
+288,0,3,"Naidenoff, Mr. Penko",male,22,0,0,7.9,S,Mr.,Train
+564,0,3,"Simmons, Mr. John",male,29.7,0,0,8.05,S,Mr.,Train
+445,1,3,"Johannesen-Bratthammer, Mr. Bernt",male,29.7,0,0,8.11,S,Mr.,Test
+90,0,3,"Celotti, Mr. Francesco",male,24,0,0,8.05,S,Mr.,Test
+110,1,3,"Moran, Miss. Bertha",female,29.7,1,0,24.15,Q,Miss,Train
+139,0,3,"Osen, Mr. Olaf Elon",male,16,0,0,9.22,S,Mr.,Train
+80,1,3,"Dowdell, Miss. Elizabeth",female,30,0,0,12.48,S,Miss,Train
+258,1,1,"Cherry, Miss. Gladys",female,30,0,0,86.5,S,Miss,Test
+888,1,1,"Graham, Miss. Margaret Edith",female,19,0,0,30,S,Miss,Train
+282,0,3,"Olsson, Mr. Nils Johan Goransson",male,28,0,0,7.85,S,Mr.,Train
+734,0,2,"Berriman, Mr. William John",male,23,0,0,13,S,Mr.,Train
+537,0,1,"Butt, Major. Archibald Willingham",male,45,0,0,26.55,S,Honorary,Train
+602,0,3,"Slabenoff, Mr. Petco",male,29.7,0,0,7.9,S,Mr.,Test
+824,1,3,"Moor, Mrs. (Beila)",female,27,0,1,12.48,S,Mrs.,Test
+303,0,3,"Johnson, Mr. William Cahoone Jr",male,19,0,0,0,S,Mr.,Test
+878,0,3,"Petroff, Mr. Nedelio",male,19,0,0,7.9,S,Mr.,Train
+213,0,3,"Perkin, Mr. John Henry",male,22,0,0,7.25,S,Mr.,Train
+85,1,2,"Ilett, Miss. Bertha",female,17,0,0,10.5,S,Miss,Train
+364,0,3,"Asim, Mr. Adola",male,35,0,0,7.05,S,Mr.,Test
+388,1,2,"Buss, Miss. Kate",female,36,0,0,13,S,Miss,Train
+385,0,3,"Plotcharsky, Mr. Vasil",male,29.7,0,0,7.9,S,Mr.,Train
+430,1,3,"Pickard, Mr. Berk (Berk Trembisky)",male,32,0,0,8.05,S,Mr.,Test
+81,0,3,"Waelens, Mr. Achille",male,22,0,0,9,S,Mr.,Train
+654,1,3,"O'Leary, Miss. Hanora ""Norah""",female,29.7,0,0,7.83,Q,Miss,Train
+767,0,1,"Brewe, Dr. Arthur Jackson",male,29.7,0,0,39.6,C,Honorary,Train
+634,0,1,"Parr, Mr. William Henry Marsh",male,29.7,0,0,0,S,Mr.,Train
+612,0,3,"Jardin, Mr. Jose Neto",male,29.7,0,0,7.05,S,Mr.,Train
+422,0,3,"Charters, Mr. David",male,21,0,0,7.73,Q,Mr.,Train
+521,1,1,"Perreault, Miss. Anne",female,30,0,0,93.5,S,Miss,Train
+766,1,1,"Hogeboom, Mrs. John C (Anna Andrews)",female,51,1,0,77.96,S,Mrs.,Train
+429,0,3,"Flynn, Mr. James",male,29.7,0,0,7.75,Q,Mr.,Train
+866,1,2,"Bystrom, Mrs. (Karolina)",female,42,0,0,13,S,Mrs.,Test
+835,0,3,"Allum, Mr. Owen George",male,18,0,0,8.3,S,Mr.,Train
+831,1,3,"Yasbeck, Mrs. Antoni (Selini Alexander)",female,15,1,0,14.45,C,Mrs.,Train
+575,0,3,"Rush, Mr. Alfred George John",male,16,0,0,8.05,S,Mr.,Test
+726,0,3,"Oreskovic, Mr. Luka",male,20,0,0,8.66,S,Mr.,Train
+123,0,2,"Nasser, Mr. Nicholas",male,32.5,1,0,30.07,C,Mr.,Test
+647,0,3,"Cor, Mr. Liudevit",male,19,0,0,7.9,S,Mr.,Train
+709,1,1,"Cleaver, Miss. Alice",female,22,0,0,151.55,S,Miss,Train
+689,0,3,"Fischer, Mr. Eberhard Thelander",male,18,0,0,7.8,S,Mr.,Test
+544,1,2,"Beane, Mr. Edward",male,32,1,0,26,S,Mr.,Train
+296,0,1,"Lewy, Mr. Ervin G",male,29.7,0,0,27.72,C,Mr.,Train
+704,0,3,"Gallagher, Mr. Martin",male,25,0,0,7.74,Q,Mr.,Train
+471,0,3,"Keefe, Mr. Arthur",male,29.7,0,0,7.25,S,Mr.,Train
+324,1,2,"Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh)",female,22,1,1,29,S,Mrs.,Train
+851,0,3,"Andersson, Master. Sigvard Harald Elias",male,4,4,2,31.28,S,Master,Test
+114,0,3,"Jussila, Miss. Katriina",female,20,1,0,9.83,S,Miss,Train
+394,1,1,"Newell, Miss. Marjorie",female,23,1,0,113.28,C,Miss,Train
+100,0,2,"Kantor, Mr. Sinai",male,34,1,0,26,S,Mr.,Train
+656,0,2,"Hickman, Mr. Leonard Mark",male,24,2,0,73.5,S,Mr.,Test
+57,1,2,"Rugg, Miss. Emily",female,21,0,0,10.5,S,Miss,Test
+448,1,1,"Seward, Mr. Frederic Kimber",male,34,0,0,26.55,S,Mr.,Test
+826,0,3,"Flynn, Mr. John",male,29.7,0,0,6.95,Q,Mr.,Test
+763,1,3,"Barah, Mr. Hanna Assi",male,20,0,0,7.23,C,Mr.,Train
+406,0,2,"Gale, Mr. Shadrach",male,34,1,0,21,S,Mr.,Test
+98,1,1,"Greenfield, Mr. William Bertram",male,23,0,1,63.36,C,Mr.,Train
+769,0,3,"Moran, Mr. Daniel J",male,29.7,1,0,24.15,Q,Mr.,Train
+262,1,3,"Asplund, Master. Edvin Rojj Felix",male,3,4,2,31.39,S,Master,Train
+847,0,3,"Sage, Mr. Douglas Bullen",male,29.7,8,2,69.55,S,Mr.,Test
+459,1,2,"Toomey, Miss. Ellen",female,50,0,0,10.5,S,Miss,Test
+333,0,1,"Graham, Mr. George Edward",male,38,0,1,153.46,S,Mr.,Train
+329,1,3,"Goldsmith, Mrs. Frank John (Emily Alice Brown)",female,31,1,1,20.53,S,Mrs.,Train
+758,0,2,"Bailey, Mr. Percy Andrew",male,18,0,0,11.5,S,Mr.,Test
+441,1,2,"Hart, Mrs. Benjamin (Esther Ada Bloomfield)",female,45,1,1,26.25,S,Mrs.,Test
+215,0,3,"Kiernan, Mr. Philip",male,29.7,1,0,7.75,Q,Mr.,Test
+175,0,1,"Smith, Mr. James Clinch",male,56,0,0,30.7,C,Mr.,Test
+450,1,1,"Peuchen, Major. Arthur Godfrey",male,52,0,0,30.5,S,Honorary,Train
+632,0,3,"Lundahl, Mr. Johan Svensson",male,51,0,0,7.05,S,Mr.,Train
+744,0,3,"McNamee, Mr. Neal",male,24,1,0,16.1,S,Mr.,Test
+873,0,1,"Carlsson, Mr. Frans Olof",male,33,0,0,5,S,Mr.,Train
+550,1,2,"Davies, Master. John Morgan Jr",male,8,1,1,36.75,S,Master,Train
+650,1,3,"Stanley, Miss. Amy Zillah Elsie",female,23,0,0,7.55,S,Miss,Test
+887,0,2,"Montvila, Rev. Juozas",male,27,0,0,13,S,Honorary,Train
+190,0,3,"Turcin, Mr. Stjepan",male,36,0,0,7.9,S,Mr.,Train
+405,0,3,"Oreskovic, Miss. Marija",female,20,0,0,8.66,S,Miss,Test
+125,0,1,"White, Mr. Percival Wayland",male,54,0,1,77.29,S,Mr.,Train
+209,1,3,"Carr, Miss. Helen ""Ellen""",female,16,0,0,7.75,Q,Miss,Train
+338,1,1,"Burns, Miss. Elizabeth Margaret",female,41,0,0,134.5,C,Miss,Test
+750,0,3,"Connaghton, Mr. Michael",male,31,0,0,7.75,Q,Mr.,Train
+596,0,3,"Van Impe, Mr. Jean Baptiste",male,36,1,1,24.15,S,Mr.,Train
+493,0,1,"Molson, Mr. Harry Markland",male,55,0,0,30.5,S,Mr.,Train
+113,0,3,"Barton, Mr. David John",male,22,0,0,8.05,S,Mr.,Train
+41,0,3,"Ahlin, Mrs. Johan (Johanna Persdotter Larsson)",female,40,1,0,9.48,S,Mrs.,Test
+682,1,1,"Hassab, Mr. Hammad",male,27,0,0,76.73,C,Mr.,Test
+88,0,3,"Slocovski, Mr. Selman Francis",male,29.7,0,0,8.05,S,Mr.,Train
+444,1,2,"Reynaldo, Ms. Encarnacion",female,28,0,0,13,S,Miss,Test
+598,0,3,"Johnson, Mr. Alfred",male,49,0,0,0,S,Mr.,Train
+620,0,2,"Gavey, Mr. Lawrence",male,26,0,0,10.5,S,Mr.,Train
+115,0,3,"Attalah, Miss. Malake",female,17,0,0,14.46,C,Miss,Train
+467,0,2,"Campbell, Mr. William",male,29.7,0,0,0,S,Mr.,Train
+523,0,3,"Lahoud, Mr. Sarkis",male,29.7,0,0,7.23,C,Mr.,Train
+854,1,1,"Lines, Miss. Mary Conover",female,16,0,1,39.4,S,Miss,Train
+339,1,3,"Dahl, Mr. Karl Edwart",male,45,0,0,8.05,S,Mr.,Test
+366,0,3,"Adahl, Mr. Mauritz Nils Martin",male,30,0,0,7.25,S,Mr.,Train
+162,1,2,"Watt, Mrs. James (Elizabeth ""Bessie"" Inglis Milne)",female,40,0,0,15.75,S,Mrs.,Test
+606,0,3,"Lindell, Mr. Edvard Bengtsson",male,36,1,0,15.55,S,Mr.,Train
+187,1,3,"O'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)",female,29.7,1,0,15.5,Q,Mrs.,Train
+432,1,3,"Thorneycroft, Mrs. Percival (Florence Kate White)",female,29.7,1,0,16.1,S,Mrs.,Test
+184,1,2,"Becker, Master. Richard F",male,1,2,1,39,S,Master,Train
+318,0,2,"Moraweck, Dr. Ernest",male,54,0,0,14,S,Honorary,Train
+699,0,1,"Thayer, Mr. John Borland",male,49,1,1,110.88,C,Mr.,Train
+275,1,3,"Healy, Miss. Hanora ""Nora""",female,29.7,0,0,7.75,Q,Miss,Train
+52,0,3,"Nosworthy, Mr. Richard Cater",male,21,0,0,7.8,S,Mr.,Train
+408,1,2,"Richards, Master. William Rowe",male,3,1,1,18.75,S,Master,Test
+882,0,3,"Markun, Mr. Johann",male,33,0,0,7.9,S,Mr.,Train
+443,0,3,"Petterson, Mr. Johan Emil",male,25,1,0,7.78,S,Mr.,Train
+541,1,1,"Crosby, Miss. Harriet R",female,36,0,2,71,S,Miss,Train
+665,1,3,"Lindqvist, Mr. Eino William",male,20,1,0,7.93,S,Mr.,Train
+107,1,3,"Salkjelsvik, Miss. Anna Kristine",female,21,0,0,7.65,S,Miss,Train
+154,0,3,"van Billiard, Mr. Austin Blyler",male,40.5,0,2,14.5,S,Mr.,Train
+347,1,2,"Smith, Miss. Marion Elsie",female,40,0,0,13,S,Miss,Test
+452,0,3,"Hagland, Mr. Ingvald Olai Olsen",male,29.7,1,0,19.97,S,Mr.,Test
+358,0,2,"Funk, Miss. Annie Clemmer",female,38,0,0,13,S,Miss,Train
+863,1,1,"Swift, Mrs. Frederick Joel (Margaret Welles Barron)",female,48,0,0,25.93,S,Mrs.,Train
+230,0,3,"Lefebre, Miss. Mathilde",female,29.7,3,1,25.47,S,Miss,Train
+237,0,2,"Hold, Mr. Stephen",male,44,1,0,26,S,Mr.,Train
+451,0,2,"West, Mr. Edwy Arthur",male,36,1,2,27.75,S,Mr.,Train
+559,1,1,"Taussig, Mrs. Emil (Tillie Mandelbaum)",female,39,1,1,79.65,S,Mrs.,Test
+850,1,1,"Goldenberg, Mrs. Samuel L (Edwiga Grabowska)",female,29.7,1,0,89.1,C,Mrs.,Train
+505,1,1,"Maioni, Miss. Roberta",female,16,0,0,86.5,S,Miss,Test
+693,1,3,"Lam, Mr. Ali",male,29.7,0,0,56.5,S,Mr.,Train
+652,1,2,"Doling, Miss. Elsie",female,18,0,1,23,S,Miss,Train
+577,1,2,"Garside, Miss. Ethel",female,34,0,0,13,S,Miss,Train
+491,0,3,"Hagland, Mr. Konrad Mathias Reiersen",male,29.7,1,0,19.97,S,Mr.,Train
+664,0,3,"Coleff, Mr. Peju",male,36,0,0,7.5,S,Mr.,Train
+805,1,3,"Hedman, Mr. Oskar Arvid",male,27,0,0,6.98,S,Mr.,Test
+600,1,1,"Duff Gordon, Sir. Cosmo Edmund (""Mr Morgan"")",male,49,1,0,56.93,C,Honorary,Train
+49,0,3,"Samaan, Mr. Youssef",male,29.7,2,0,21.68,C,Mr.,Train
+238,1,2,"Collyer, Miss. Marjorie ""Lottie""",female,8,0,2,26.25,S,Miss,Train
+748,1,2,"Sinkkonen, Miss. Anna",female,30,0,0,13,S,Miss,Train
+257,1,1,"Thorne, Mrs. Gertrude Maybelle",female,29.7,0,0,79.2,C,Mrs.,Train
+47,0,3,"Lennon, Mr. Denis",male,29.7,1,0,15.5,Q,Mr.,Test
+200,0,2,"Yrois, Miss. Henriette (""Mrs Harbeck"")",female,24,0,0,13,S,Miss,Train
+678,1,3,"Turja, Miss. Anna Sofia",female,18,0,0,9.84,S,Miss,Train
+877,0,3,"Gustafsson, Mr. Alfred Ossian",male,20,0,0,9.85,S,Mr.,Test
+540,1,1,"Frolicher, Miss. Hedwig Margaritha",female,22,0,2,49.5,C,Miss,Train
+24,1,1,"Sloper, Mr. William Thompson",male,28,0,0,35.5,S,Mr.,Train
+819,0,3,"Holm, Mr. John Fredrik Alexander",male,43,0,0,6.45,S,Mr.,Test
+787,1,3,"Sjoblom, Miss. Anna Sofia",female,18,0,0,7.5,S,Miss,Train
+353,0,3,"Elias, Mr. Tannous",male,15,1,1,7.23,C,Mr.,Test
+716,0,3,"Soholt, Mr. Peter Andreas Lauritz Andersen",male,19,0,0,7.65,S,Mr.,Train
+384,1,1,"Holverson, Mrs. Alexander Oskar (Mary Aline Towner)",female,35,1,0,52,S,Mrs.,Train
+327,0,3,"Nysveen, Mr. Johan Hansen",male,61,0,0,6.24,S,Mr.,Train
+858,1,1,"Daly, Mr. Peter Denis",male,51,0,0,26.55,S,Mr.,Test
+881,1,2,"Shelley, Mrs. William (Imanita Parrish Hall)",female,25,0,1,26,S,Mrs.,Train
+526,0,3,"Farrell, Mr. James",male,40.5,0,0,7.75,Q,Mr.,Train
+198,0,3,"Olsen, Mr. Karl Siegwart Andreas",male,42,0,1,8.4,S,Mr.,Train
+202,0,3,"Sage, Mr. Frederick",male,29.7,8,2,69.55,S,Mr.,Test
+879,0,3,"Laleff, Mr. Kristo",male,29.7,0,0,7.9,S,Mr.,Train
+152,1,1,"Pears, Mrs. Thomas (Edith Wearne)",female,22,1,0,66.6,S,Mrs.,Train
+653,0,3,"Kalvik, Mr. Johannes Halvorsen",male,21,0,0,8.43,S,Mr.,Train
+147,1,3,"Andersson, Mr. August Edvard (""Wennerstrom"")",male,27,0,0,7.8,S,Mr.,Train
+563,0,2,"Norman, Mr. Robert Douglas",male,28,0,0,13.5,S,Mr.,Train
+791,0,3,"Keane, Mr. Andrew ""Andy""",male,29.7,0,0,7.75,Q,Mr.,Train
+214,0,2,"Givard, Mr. Hans Kristensen",male,30,0,0,13,S,Mr.,Train
+516,0,1,"Walker, Mr. William Anderson",male,47,0,0,34.02,S,Mr.,Train
+798,1,3,"Osman, Mrs. Mara",female,31,0,0,8.68,S,Mrs.,Train
+848,0,3,"Markoff, Mr. Marin",male,35,0,0,7.9,C,Mr.,Test
+502,0,3,"Canavan, Miss. Mary",female,21,0,0,7.75,Q,Miss,Train
+34,0,2,"Wheadon, Mr. Edward H",male,66,0,0,10.5,S,Mr.,Train
+177,0,3,"Lefebre, Master. Henry Forbes",male,29.7,3,1,25.47,S,Master,Train
+480,1,3,"Hirvonen, Miss. Hildur E",female,2,0,1,12.29,S,Miss,Train
+673,0,2,"Mitchell, Mr. Henry Michael",male,70,0,0,10.5,S,Mr.,Train
+218,0,2,"Jacobsohn, Mr. Sidney Samuel",male,42,1,0,27,S,Mr.,Train
+279,0,3,"Rice, Master. Eric",male,7,4,1,29.13,Q,Master,Train
+10,1,2,"Nasser, Mrs. Nicholas (Adele Achem)",female,14,1,0,30.07,C,Mrs.,Train
+604,0,3,"Torber, Mr. Ernst William",male,44,0,0,8.05,S,Mr.,Train
+419,0,2,"Matthews, Mr. William John",male,30,0,0,13,S,Mr.,Train
+380,0,3,"Gustafsson, Mr. Karl Gideon",male,19,0,0,7.78,S,Mr.,Train
+797,1,1,"Leader, Dr. Alice (Farnham)",female,49,0,0,25.93,S,Honorary,Test
+724,0,2,"Hodges, Mr. Henry Price",male,50,0,0,13,S,Mr.,Train
+455,0,3,"Peduzzi, Mr. Joseph",male,29.7,0,0,8.05,S,Mr.,Train
+702,1,1,"Silverthorne, Mr. Spencer Victor",male,35,0,0,26.29,S,Mr.,Train
+67,1,2,"Nye, Mrs. (Elizabeth Ramell)",female,29,0,0,10.5,S,Mrs.,Train
+802,1,2,"Collyer, Mrs. Harvey (Charlotte Annie Tate)",female,31,1,1,26.25,S,Mrs.,Train
+97,0,1,"Goldschmidt, Mr. George B",male,71,0,0,34.65,C,Mr.,Train
+730,0,3,"Ilmakangas, Miss. Pieta Sofia",female,25,1,0,7.93,S,Miss,Train
+725,1,1,"Chambers, Mr. Norman Campbell",male,27,1,0,53.1,S,Mr.,Train
+372,0,3,"Wiklund, Mr. Jakob Alfred",male,18,1,0,6.5,S,Mr.,Test
+91,0,3,"Christmann, Mr. Emil",male,29,0,0,8.05,S,Mr.,Train
+484,1,3,"Turkula, Mrs. (Hedwig)",female,63,0,0,9.59,S,Mrs.,Test
+671,1,2,"Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford)",female,40,1,1,39,S,Mrs.,Train
+833,0,3,"Saad, Mr. Amin",male,29.7,0,0,7.23,C,Mr.,Train
+545,0,1,"Douglas, Mr. Walter Donald",male,50,1,0,106.43,C,Mr.,Train
+648,1,1,"Simonius-Blumer, Col. Oberst Alfons",male,56,0,0,35.5,C,Honorary,Train
+46,0,3,"Rogers, Mr. William John",male,29.7,0,0,8.05,S,Mr.,Train
+592,1,1,"Stephenson, Mrs. Walter Bertram (Martha Eustis)",female,52,1,0,78.27,C,Mrs.,Test
+310,1,1,"Francatelli, Miss. Laura Mabel",female,30,0,0,56.93,C,Miss,Train
+31,0,1,"Uruchurtu, Don. Manuel E",male,40,0,0,27.72,C,Honorary,Train
+248,1,2,"Hamalainen, Mrs. William (Anna)",female,24,0,2,14.5,S,Mrs.,Train
+514,1,1,"Rothschild, Mrs. Martin (Elizabeth L. Barrett)",female,54,1,0,59.4,C,Mrs.,Train
+433,1,2,"Louch, Mrs. Charles Alexander (Alice Adelaide Slow)",female,42,1,0,26,S,Mrs.,Train
+511,1,3,"Daly, Mr. Eugene Patrick",male,29,0,0,7.75,Q,Mr.,Train
+464,0,2,"Milling, Mr. Jacob Christian",male,48,0,0,13,S,Mr.,Train
+823,0,1,"Reuchlin, Jonkheer. John George",male,38,0,0,0,S,Honorary,Test
+317,1,2,"Kantor, Mrs. Sinai (Miriam Sternin)",female,24,1,0,26,S,Mrs.,Test
+522,0,3,"Vovk, Mr. Janko",male,22,0,0,7.9,S,Mr.,Test
+395,1,3,"Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson)",female,24,0,2,16.7,S,Mrs.,Train
+519,1,2,"Angle, Mrs. William A (Florence ""Mary"" Agnes Hughes)",female,36,1,0,26,S,Mrs.,Test
+556,0,1,"Wright, Mr. George",male,62,0,0,26.55,S,Mr.,Test
+742,0,1,"Cavendish, Mr. Tyrell William",male,36,1,0,78.85,S,Mr.,Test
+736,0,3,"Williams, Mr. Leslie",male,28.5,0,0,16.1,S,Mr.,Test
+810,1,1,"Chambers, Mrs. Norman Campbell (Bertha Griggs)",female,33,1,0,53.1,S,Mrs.,Train
+260,1,2,"Parrish, Mrs. (Lutie Davis)",female,50,0,1,26,S,Mrs.,Train
+183,0,3,"Asplund, Master. Clarence Gustaf Hugo",male,9,4,2,31.39,S,Master,Train
+788,0,3,"Rice, Master. George Hugh",male,8,4,1,29.13,Q,Master,Train
+655,0,3,"Hegarty, Miss. Hanora ""Nora""",female,18,0,0,6.75,Q,Miss,Train
+534,1,3,"Peter, Mrs. Catherine (Catherine Rizk)",female,29.7,0,2,22.36,C,Mrs.,Train
+768,0,3,"Mangan, Miss. Mary",female,30.5,0,0,7.75,Q,Miss,Train
+302,1,3,"McCoy, Mr. Bernard",male,29.7,2,0,23.25,Q,Mr.,Train
+195,1,1,"Brown, Mrs. James Joseph (Margaret Tobin)",female,44,0,0,27.72,C,Mrs.,Test
+832,1,2,"Richards, Master. George Sibley",male,0.8,1,1,18.75,S,Master,Test
+410,0,3,"Lefebre, Miss. Ida",female,29.7,3,1,25.47,S,Miss,Test
+55,0,1,"Ostby, Mr. Engelhart Cornelius",male,65,0,1,61.98,C,Mr.,Train
+538,1,1,"LeRoy, Miss. Bertha",female,30,0,0,106.43,C,Miss,Test
+71,0,2,"Jenkin, Mr. Stephen Curnow",male,32,0,0,10.5,S,Mr.,Train
+36,0,1,"Holverson, Mr. Alexander Oskar",male,42,1,0,52,S,Mr.,Train
+82,1,3,"Sheerlinck, Mr. Jan Baptist",male,29,0,0,9.5,S,Mr.,Train
+829,1,3,"McCormack, Mr. Thomas Joseph",male,29.7,0,0,7.75,Q,Mr.,Train
+360,1,3,"Mockler, Miss. Helen Mary ""Ellie""",female,29.7,0,0,7.88,Q,Miss,Test
+599,0,3,"Boulos, Mr. Hanna",male,29.7,0,0,7.23,C,Mr.,Train
+224,0,3,"Nenkoff, Mr. Christo",male,29.7,0,0,7.9,S,Mr.,Train
+683,0,3,"Olsvigen, Mr. Thor Anderson",male,20,0,0,9.23,S,Mr.,Test
+529,0,3,"Salonen, Mr. Johan Werner",male,39,0,0,7.93,S,Mr.,Test
+219,1,1,"Bazzani, Miss. Albina",female,32,0,0,76.29,C,Miss,Train
+126,1,3,"Nicola-Yarred, Master. Elias",male,12,1,0,11.24,C,Master,Train
+687,0,3,"Panula, Mr. Jaako Arnold",male,14,4,1,39.69,S,Mr.,Train
+594,0,3,"Bourke, Miss. Mary",female,29.7,0,2,7.75,Q,Miss,Train
+306,1,1,"Allison, Master. Hudson Trevor",male,0.9,1,2,151.55,S,Master,Test
+590,0,3,"Murdlin, Mr. Joseph",male,29.7,0,0,8.05,S,Mr.,Test
+662,0,3,"Badt, Mr. Mohamed",male,40,0,0,7.23,C,Mr.,Train
+172,0,3,"Rice, Master. Arthur",male,4,4,1,29.13,Q,Master,Train
+156,0,1,"Williams, Mr. Charles Duane",male,51,0,1,61.38,C,Mr.,Test
+560,1,3,"de Messemaeker, Mrs. Guillaume Joseph (Emma)",female,36,1,0,17.4,S,Mrs.,Test
+207,0,3,"Backstrom, Mr. Karl Alfred",male,32,1,0,15.85,S,Mr.,Train
+363,0,3,"Barbara, Mrs. (Catherine David)",female,45,0,1,14.45,C,Mrs.,Train
+779,0,3,"Kilgannon, Mr. Thomas J",male,29.7,0,0,7.74,Q,Mr.,Train
+707,1,2,"Kelly, Mrs. Florence ""Fannie""",female,45,0,0,13.5,S,Mrs.,Train
+393,0,3,"Gustafsson, Mr. Johan Birger",male,28,2,0,7.93,S,Mr.,Train
+349,1,3,"Coutts, Master. William Loch ""William""",male,3,1,1,15.9,S,Master,Train
+269,1,1,"Graham, Mrs. William Thompson (Edith Junkins)",female,58,0,1,153.46,S,Mrs.,Train
+463,0,1,"Gee, Mr. Arthur H",male,47,0,0,38.5,S,Mr.,Train
+280,1,3,"Abbott, Mrs. Stanton (Rosa Hunt)",female,35,1,1,20.25,S,Mrs.,Train
+336,0,3,"Denkoff, Mr. Mitto",male,29.7,0,0,7.9,S,Mr.,Test
+164,0,3,"Calic, Mr. Jovo",male,17,0,0,8.66,S,Mr.,Train
+427,1,2,"Clarke, Mrs. Charles V (Ada Maria Winfield)",female,28,1,0,26,S,Mrs.,Train
+518,0,3,"Ryan, Mr. Patrick",male,29.7,0,0,24.15,Q,Mr.,Test
+588,1,1,"Frolicher-Stehli, Mr. Maxmillian",male,60,1,1,79.2,C,Mr.,Train
+39,0,3,"Vander Planke, Miss. Augusta Maria",female,18,2,0,18,S,Miss,Train
+510,1,3,"Lang, Mr. Fang",male,26,0,0,56.5,S,Mr.,Train
+189,0,3,"Bourke, Mr. John",male,40,1,1,15.5,Q,Mr.,Train
+340,0,1,"Blackwell, Mr. Stephen Weart",male,45,0,0,35.5,S,Mr.,Train
+111,0,1,"Porter, Mr. Walter Chamberlain",male,47,0,0,52,S,Mr.,Test
+48,1,3,"O'Driscoll, Miss. Bridget",female,29.7,0,0,7.75,Q,Miss,Train
+572,1,1,"Appleton, Mrs. Edward Dale (Charlotte Lamson)",female,53,2,0,51.48,S,Mrs.,Train
+30,0,3,"Todoroff, Mr. Lalio",male,29.7,0,0,7.9,S,Mr.,Train
+169,0,1,"Baumann, Mr. John D",male,29.7,0,0,25.93,S,Mr.,Train
+691,1,1,"Dick, Mr. Albert Adrian",male,31,1,0,57,S,Mr.,Test
+281,0,3,"Duane, Mr. Frank",male,65,0,0,7.75,Q,Mr.,Train
+646,1,1,"Harper, Mr. Henry Sleeper",male,48,1,0,76.73,C,Mr.,Train
+40,1,3,"Nicola-Yarred, Miss. Jamila",female,14,1,0,11.24,C,Miss,Train
+316,1,3,"Nilsson, Miss. Helmina Josefina",female,26,0,0,7.85,S,Miss,Train
+891,0,3,"Dooley, Mr. Patrick",male,32,0,0,7.75,Q,Mr.,Train
+619,1,2,"Becker, Miss. Marion Louise",female,4,2,1,39,S,Miss,Train
+517,1,2,"Lemore, Mrs. (Amelia Milley)",female,34,0,0,10.5,S,Mrs.,Train
+447,1,2,"Mellinger, Miss. Madeleine Violet",female,13,0,1,19.5,S,Miss,Train
+116,0,3,"Pekoniemi, Mr. Edvard",male,21,0,0,7.93,S,Mr.,Train
+617,0,3,"Danbom, Mr. Ernst Gilbert",male,34,1,1,14.4,S,Mr.,Train
+45,1,3,"Devaney, Miss. Margaret Delia",female,19,0,0,7.88,Q,Miss,Train
+708,1,1,"Calderhead, Mr. Edward Pennington",male,42,0,0,26.29,S,Mr.,Train
+845,0,3,"Culumovic, Mr. Jeso",male,17,0,0,8.66,S,Mr.,Test
+6,0,3,"Moran, Mr. James",male,29.7,0,0,8.46,Q,Mr.,Train
+667,0,2,"Butler, Mr. Reginald Fenton",male,25,0,0,13,S,Mr.,Test
+170,0,3,"Ling, Mr. Lee",male,28,0,0,56.5,S,Mr.,Train
+838,0,3,"Sirota, Mr. Maurice",male,29.7,0,0,8.05,S,Mr.,Train
+446,1,1,"Dodge, Master. Washington",male,4,0,2,81.86,S,Master,Test
+322,0,3,"Danoff, Mr. Yoto",male,27,0,0,7.9,S,Mr.,Test
+379,0,3,"Betros, Mr. Tannous",male,20,0,0,4.01,C,Mr.,Test
+225,1,1,"Hoyt, Mr. Frederick Maxfield",male,38,1,0,90,S,Mr.,Test
+312,1,1,"Ryerson, Miss. Emily Borie",female,18,2,2,262.38,C,Miss,Test
+337,0,1,"Pears, Mr. Thomas Clinton",male,29,1,0,66.6,S,Mr.,Test
+875,1,2,"Abelson, Mrs. Samuel (Hannah Wizosky)",female,28,1,0,24,C,Mrs.,Train
+782,1,1,"Dick, Mrs. Albert Adrian (Vera Gillespie)",female,17,1,0,57,S,Mrs.,Test
+747,0,3,"Abbott, Mr. Rossmore Edward",male,16,1,1,20.25,S,Mr.,Train
+416,0,3,"Meek, Mrs. Thomas (Annie Louise Rowley)",female,29.7,0,0,8.05,S,Mrs.,Train
+884,0,2,"Banfield, Mr. Frederick James",male,28,0,0,10.5,S,Mr.,Train
+19,0,3,"Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)",female,31,1,0,18,S,Mrs.,Train
+806,0,3,"Johansson, Mr. Karl Johan",male,31,0,0,7.78,S,Mr.,Train
+143,1,3,"Hakkarainen, Mrs. Pekka Pietari (Elin Matilda Dolck)",female,24,1,0,15.85,S,Mrs.,Train
+638,0,2,"Collyer, Mr. Harvey",male,31,1,1,26.25,S,Mr.,Test
+233,0,2,"Sjostedt, Mr. Ernst Adolf",male,59,0,0,13.5,S,Mr.,Train
+696,0,2,"Chapman, Mr. Charles Henry",male,52,0,0,13.5,S,Mr.,Test
+298,0,1,"Allison, Miss. Helen Loraine",female,2,1,2,151.55,S,Miss,Train
+9,1,3,"Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)",female,27,0,2,11.13,S,Mrs.,Train
+870,1,3,"Johnson, Master. Harold Theodor",male,4,1,1,11.13,S,Master,Train
+816,0,1,"Fry, Mr. Richard",male,29.7,0,0,0,S,Mr.,Test
+549,0,3,"Goldsmith, Mr. Frank John",male,33,1,1,20.53,S,Mr.,Test
+531,1,2,"Quick, Miss. Phyllis May",female,2,1,1,26,S,Miss,Train
+193,1,3,"Andersen-Jensen, Miss. Carla Christine Nielsine",female,19,1,0,7.85,S,Miss,Train
+675,0,2,"Watson, Mr. Ennis Hastings",male,29.7,0,0,0,S,Mr.,Train
+562,0,3,"Sivic, Mr. Husein",male,40,0,0,7.9,S,Mr.,Train
+737,0,3,"Ford, Mrs. Edward (Margaret Ann Watson)",female,48,1,3,34.38,S,Mrs.,Train
+435,0,1,"Silvey, Mr. William Baird",male,50,1,0,55.9,S,Mr.,Train
+8,0,3,"Palsson, Master. Gosta Leonard",male,2,3,1,21.08,S,Master,Train
+253,0,1,"Stead, Mr. William Thomas",male,62,0,0,26.55,S,Mr.,Train
+532,0,3,"Toufik, Mr. Nakli",male,29.7,0,0,7.23,C,Mr.,Train
+148,0,3,"Ford, Miss. Robina Maggie ""Ruby""",female,9,2,2,34.38,S,Miss,Train
+643,0,3,"Skoog, Miss. Margit Elizabeth",female,2,3,2,27.9,S,Miss,Train
+591,0,3,"Rintamaki, Mr. Matti",male,35,0,0,7.13,S,Mr.,Train
+715,0,2,"Greenberg, Mr. Samuel",male,52,0,0,13,S,Mr.,Train
+836,1,1,"Compton, Miss. Sara Rebecca",female,39,1,1,83.16,C,Miss,Train
+122,0,3,"Moore, Mr. Leonard Charles",male,29.7,0,0,8.05,S,Mr.,Train
+728,1,3,"Mannion, Miss. Margareth",female,29.7,0,0,7.74,Q,Miss,Train
+11,1,3,"Sandstrom, Miss. Marguerite Rut",female,4,1,1,16.7,S,Miss,Test
+781,1,3,"Ayoub, Miss. Banoura",female,13,0,0,7.23,C,Miss,Train
+43,0,3,"Kraeff, Mr. Theodor",male,29.7,0,0,7.9,C,Mr.,Train
+301,1,3,"Kelly, Miss. Anna Katherine ""Annie Kate""",female,29.7,0,0,7.75,Q,Miss,Train
+196,1,1,"Lurette, Miss. Elise",female,58,0,0,146.52,C,Miss,Train
+814,0,3,"Andersson, Miss. Ebba Iris Alfrida",female,6,4,2,31.28,S,Miss,Train
+543,0,3,"Andersson, Miss. Sigrid Elisabeth",female,11,4,2,31.28,S,Miss,Test
+112,0,3,"Zabour, Miss. Hileni",female,14.5,1,0,14.45,C,Miss,Train
+89,1,1,"Fortune, Miss. Mabel Helen",female,23,3,2,263,S,Miss,Train
+868,0,1,"Roebling, Mr. Washington Augustus II",male,31,0,0,50.5,S,Mr.,Train
+60,0,3,"Goodwin, Master. William Frederick",male,11,5,2,46.9,S,Master,Train
+461,1,1,"Anderson, Mr. Harry",male,48,0,0,26.55,S,Mr.,Train
+86,1,3,"Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson)",female,33,3,0,15.85,S,Mrs.,Test
+371,1,1,"Harder, Mr. George Achilles",male,25,1,0,55.44,C,Mr.,Train
+546,0,1,"Nicholson, Mr. Arthur Ernest",male,64,0,0,26,S,Mr.,Test
+402,0,3,"Adams, Mr. John",male,26,0,0,8.05,S,Mr.,Test
+808,0,3,"Pettersson, Miss. Ellen Natalia",female,18,0,0,7.78,S,Miss,Train
+341,1,2,"Navratil, Master. Edmond Roger",male,2,1,1,26,S,Master,Train
+240,0,2,"Hunt, Mr. George Henry",male,33,0,0,12.28,S,Mr.,Test
+375,0,3,"Palsson, Miss. Stina Viola",female,3,3,1,21.08,S,Miss,Train
+151,0,2,"Bateman, Rev. Robert James",male,51,0,0,12.53,S,Honorary,Train
+774,0,3,"Elias, Mr. Dibo",male,29.7,0,0,7.23,C,Mr.,Test
+438,1,2,"Richards, Mrs. Sidney (Emily Hocking)",female,24,2,3,18.75,S,Mrs.,Train
+182,0,2,"Pernot, Mr. Rene",male,29.7,0,0,15.05,C,Mr.,Train
+555,1,3,"Ohman, Miss. Velin",female,22,0,0,7.78,S,Miss,Test
+119,0,1,"Baxter, Mr. Quigg Edmond",male,24,0,1,247.52,C,Mr.,Test
+677,0,3,"Sawyer, Mr. Frederick Charles",male,24.5,0,0,8.05,S,Mr.,Train
+414,0,2,"Cunningham, Mr. Alfred Fleming",male,29.7,0,0,0,S,Mr.,Test
+685,0,2,"Brown, Mr. Thomas William Solomon",male,60,1,1,39,S,Mr.,Test
+473,1,2,"West, Mrs. Edwy Arthur (Ada Mary Worth)",female,33,1,2,27.75,S,Mrs.,Train
+149,0,2,"Navratil, Mr. Michel (""Louis M Hoffman"")",male,36.5,0,2,26,S,Mr.,Test
+503,0,3,"O'Sullivan, Miss. Bridget Mary",female,29.7,0,0,7.63,Q,Miss,Train
+354,0,3,"Arnold-Franchi, Mr. Josef",male,25,1,0,17.8,S,Mr.,Train
+466,0,3,"Goncalves, Mr. Manuel Estanslas",male,38,0,0,7.05,S,Mr.,Train
+20,1,3,"Masselmani, Mrs. Fatima",female,29.7,0,0,7.23,C,Mrs.,Train
+552,0,2,"Sharp, Mr. Percival James R",male,27,0,0,26,S,Mr.,Train
+434,0,3,"Kallio, Mr. Nikolai Erland",male,17,0,0,7.13,S,Mr.,Train
+439,0,1,"Fortune, Mr. Mark",male,64,1,4,263,S,Mr.,Train
+765,0,3,"Eklund, Mr. Hans Linus",male,16,0,0,7.78,S,Mr.,Train
+134,1,2,"Weisz, Mrs. Leopold (Mathilde Francoise Pede)",female,29,1,0,26,S,Mrs.,Train
+582,1,1,"Thayer, Mrs. John Borland (Marian Longstreth Morris)",female,39,1,1,110.88,C,Mrs.,Train
+348,1,3,"Davison, Mrs. Thomas Henry (Mary E Finck)",female,29.7,1,0,16.1,S,Mrs.,Train
+308,1,1,"Penasco y Castellana, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo)",female,17,1,0,108.9,C,Mrs.,Train
+383,0,3,"Tikkanen, Mr. Juho",male,32,0,0,7.93,S,Mr.,Test
+570,1,3,"Jonsson, Mr. Carl",male,32,0,0,7.85,S,Mr.,Train
+22,1,2,"Beesley, Mr. Lawrence",male,34,0,0,13,S,Mr.,Test
+697,0,3,"Kelly, Mr. James",male,44,0,0,8.05,S,Mr.,Train
+18,1,2,"Williams, Mr. Charles Eugene",male,29.7,0,0,13,S,Mr.,Train
+528,0,1,"Farthing, Mr. John",male,29.7,0,0,221.78,S,Mr.,Train
+494,0,1,"Artagaveytia, Mr. Ramon",male,71,0,0,49.5,C,Mr.,Test
+144,0,3,"Burke, Mr. Jeremiah",male,19,0,0,6.75,Q,Mr.,Train
+403,0,3,"Jussila, Miss. Mari Aina",female,21,1,0,9.83,S,Miss,Train
+717,1,1,"Endres, Miss. Caroline Louise",female,38,0,0,227.53,C,Miss,Test
+756,1,2,"Hamalainen, Master. Viljo",male,0.7,1,1,14.5,S,Master,Test
+250,0,2,"Carter, Rev. Ernest Courtenay",male,54,1,0,26,S,Honorary,Train
+509,0,3,"Olsen, Mr. Henry Margido",male,28,0,0,22.53,S,Mr.,Train
+584,0,1,"Ross, Mr. John Hugo",male,36,0,0,40.13,C,Mr.,Train
+326,1,1,"Young, Miss. Marie Grice",female,36,0,0,135.63,C,Miss,Train
+867,1,2,"Duran y More, Miss. Asuncion",female,27,1,0,13.86,C,Miss,Test
+199,1,3,"Madigan, Miss. Margaret ""Maggie""",female,29.7,0,0,7.75,Q,Miss,Train
+849,0,2,"Harper, Rev. John",male,28,0,1,33,S,Honorary,Train
+130,0,3,"Ekstrom, Mr. Johan",male,45,0,0,6.98,S,Mr.,Train
+277,0,3,"Lindblom, Miss. Augusta Charlotta",female,45,0,0,7.75,S,Miss,Train
+775,1,2,"Hocking, Mrs. Elizabeth (Eliza Needs)",female,54,1,3,23,S,Mrs.,Train
+357,1,1,"Bowerman, Miss. Elsie Edith",female,22,0,1,55,S,Miss,Train
+54,1,2,"Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson)",female,29,1,0,26,S,Mrs.,Test
+886,0,3,"Rice, Mrs. William (Margaret Norton)",female,39,0,5,29.13,Q,Mrs.,Test
+37,1,3,"Mamee, Mr. Hanna",male,29.7,0,0,7.23,C,Mr.,Train
+794,0,1,"Hoyt, Mr. William Fisher",male,29.7,0,0,30.7,C,Mr.,Train
+3,1,3,"Heikkinen, Miss. Laina",female,26,0,0,7.93,S,Miss,Test
+692,1,3,"Karun, Miss. Manca",female,4,0,1,13.42,C,Miss,Train
+844,0,3,"Lemberopolous, Mr. Peter L",male,34.5,0,0,6.44,C,Mr.,Train
+171,0,1,"Van der hoef, Mr. Wyckoff",male,61,0,0,33.5,S,Mr.,Train
+834,0,3,"Augustsson, Mr. Albert",male,23,0,0,7.85,S,Mr.,Train
+212,1,2,"Cameron, Miss. Clear Annie",female,35,0,0,21,S,Miss,Test
+477,0,2,"Renouf, Mr. Peter Henry",male,34,1,0,21,S,Mr.,Train
+263,0,1,"Taussig, Mr. Emil",male,52,1,1,79.65,S,Mr.,Train
+153,0,3,"Meo, Mr. Alfonzo",male,55.5,0,0,8.05,S,Mr.,Train
+194,1,2,"Navratil, Master. Michel M",male,3,1,1,26,S,Master,Train
+96,0,3,"Shorney, Mr. Charles Joseph",male,29.7,0,0,8.05,S,Mr.,Train
+674,1,2,"Wilhelms, Mr. Charles",male,31,0,0,13,S,Mr.,Train
+506,0,1,"Penasco y Castellana, Mr. Victor de Satode",male,18,1,0,108.9,C,Mr.,Train
+615,0,3,"Brocklebank, Mr. William Alfred",male,35,0,0,8.05,S,Mr.,Train
+121,0,2,"Hickman, Mr. Stanley George",male,21,2,0,73.5,S,Mr.,Train
+118,0,2,"Turpin, Mr. William John Robert",male,29,1,0,21,S,Mr.,Train
+361,0,3,"Skoog, Mr. Wilhelm",male,40,1,4,27.9,S,Mr.,Train
+735,0,2,"Troupiansky, Mr. Moses Aaron",male,23,0,0,13,S,Mr.,Test
+488,0,1,"Kent, Mr. Edward Austin",male,58,0,0,29.7,C,Mr.,Train
+166,1,3,"Goldsmith, Master. Frank John William ""Frankie""",male,9,0,2,20.53,S,Master,Train
+104,0,3,"Johansson, Mr. Gustaf Joel",male,33,0,0,8.65,S,Mr.,Train
+776,0,3,"Myhrman, Mr. Pehr Fabian Oliver Malkolm",male,18,0,0,7.75,S,Mr.,Train
+475,0,3,"Strandberg, Miss. Ida Sofia",female,22,0,0,9.84,S,Miss,Test
+703,0,3,"Barbara, Miss. Saiide",female,18,0,1,14.45,C,Miss,Train
+672,0,1,"Davidson, Mr. Thornton",male,31,1,0,52,S,Mr.,Train
+309,0,2,"Abelson, Mr. Samuel",male,30,1,0,24,C,Mr.,Test
+267,0,3,"Panula, Mr. Ernesti Arvid",male,16,4,1,39.69,S,Mr.,Train
+828,1,2,"Mallet, Master. Andre",male,1,0,2,37,C,Master,Test
+415,1,3,"Sundman, Mr. Johan Julian",male,44,0,0,7.93,S,Mr.,Test
+307,1,1,"Fleming, Miss. Margaret",female,29.7,0,0,110.88,C,Miss,Train
+51,0,3,"Panula, Master. Juha Niilo",male,7,4,1,39.69,S,Master,Train
+437,0,3,"Ford, Miss. Doolina Margaret ""Daisy""",female,21,2,2,34.38,S,Miss,Train
+576,0,3,"Patchett, Mr. George",male,19,0,0,14.5,S,Mr.,Train
+313,0,2,"Lahtinen, Mrs. William (Anna Sylfven)",female,26,1,1,26,S,Mrs.,Train
+486,0,3,"Lefebre, Miss. Jeannie",female,29.7,3,1,25.47,S,Miss,Test
+228,0,3,"Lovell, Mr. John Hall (""Henry"")",male,20.5,0,0,7.25,S,Mr.,Train
+25,0,3,"Palsson, Miss. Torborg Danira",female,8,3,1,21.08,S,Miss,Test
+525,0,3,"Kassem, Mr. Fared",male,29.7,0,0,7.23,C,Mr.,Test
+581,1,2,"Christy, Miss. Julie Rachel",female,25,1,1,30,S,Miss,Test
+498,0,3,"Shellard, Mr. Frederick William",male,29.7,0,0,15.1,S,Mr.,Test
+712,0,1,"Klaber, Mr. Herman",male,29.7,0,0,26.55,S,Mr.,Train
+127,0,3,"McMahon, Mr. Martin",male,29.7,0,0,7.75,Q,Mr.,Train
+567,0,3,"Stoytcheff, Mr. Ilia",male,19,0,0,7.9,S,Mr.,Train
+15,0,3,"Vestrom, Miss. Hulda Amanda Adolfina",female,14,0,0,7.85,S,Miss,Train
+222,0,2,"Bracken, Mr. James H",male,27,0,0,13,S,Mr.,Train
+843,1,1,"Serepeca, Miss. Augusta",female,30,0,0,31,C,Miss,Train
+661,1,1,"Frauenthal, Dr. Henry William",male,50,2,0,133.65,S,Honorary,Train
+504,0,3,"Laitinen, Miss. Kristina Sofia",female,37,0,0,9.59,S,Miss,Train
+813,0,2,"Slemen, Mr. Richard James",male,35,0,0,10.5,S,Mr.,Train
+138,0,1,"Futrelle, Mr. Jacques Heath",male,37,1,0,53.1,S,Mr.,Train
+761,0,3,"Garfirth, Mr. John",male,29.7,0,0,14.5,S,Mr.,Test
+440,0,2,"Kvillner, Mr. Johan Henrik Johannesson",male,31,0,0,10.5,S,Mr.,Train
+809,0,2,"Meyer, Mr. August",male,39,0,0,13,S,Mr.,Test
+657,0,3,"Radeff, Mr. Alexander",male,29.7,0,0,7.9,S,Mr.,Train
+291,1,1,"Barber, Miss. Ellen ""Nellie""",female,26,0,0,78.85,S,Miss,Train
+815,0,3,"Tomlin, Mr. Ernest Portage",male,30.5,0,0,8.05,S,Mr.,Train
+670,1,1,"Taylor, Mrs. Elmer Zebley (Juliet Cummins Wright)",female,29.7,1,0,52,S,Mrs.,Train
+837,0,3,"Pasic, Mr. Jakob",male,21,0,0,8.66,S,Mr.,Train
+205,1,3,"Cohen, Mr. Gurshon ""Gus""",male,18,0,0,8.05,S,Mr.,Train
+487,1,1,"Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby)",female,35,1,0,90,S,Mrs.,Train
+442,0,3,"Hampe, Mr. Leon",male,20,0,0,9.5,S,Mr.,Train
+399,0,2,"Pain, Dr. Alfred",male,23,0,0,10.5,S,Honorary,Train
+128,1,3,"Madsen, Mr. Fridtjof Arne",male,24,0,0,7.14,S,Mr.,Train
+421,0,3,"Gheorgheff, Mr. Stanio",male,29.7,0,0,7.9,C,Mr.,Test
+743,1,1,"Ryerson, Miss. Susan Parker ""Suzette""",female,21,2,2,262.38,C,Miss,Test
+140,0,1,"Giglio, Mr. Victor",male,24,0,0,79.2,C,Mr.,Train
+407,0,3,"Widegren, Mr. Carl/Charles Peter",male,51,0,0,7.75,S,Mr.,Train
+807,0,1,"Andrews, Mr. Thomas Jr",male,39,0,0,0,S,Mr.,Train
+236,0,3,"Harknett, Miss. Alice Phoebe",female,29.7,0,0,7.55,S,Miss,Test
+476,0,1,"Clifford, Mr. George Quincy",male,29.7,0,0,52,S,Mr.,Train
+297,0,3,"Hanna, Mr. Mansour",male,23.5,0,0,7.23,C,Mr.,Train
+472,0,3,"Cacic, Mr. Luka",male,38,0,0,8.66,S,Mr.,Train
+33,1,3,"Glynn, Miss. Mary Agatha",female,29.7,0,0,7.75,Q,Miss,Test
+271,0,1,"Cairns, Mr. Alexander",male,29.7,0,0,31,S,Mr.,Train
+203,0,3,"Johanson, Mr. Jakob Alfred",male,34,0,0,6.5,S,Mr.,Test
+822,1,3,"Lulic, Mr. Nikola",male,27,0,0,8.66,S,Mr.,Train
+351,0,3,"Odahl, Mr. Nils Martin",male,23,0,0,9.23,S,Mr.,Train
+404,0,3,"Hakkarainen, Mr. Pekka Pietari",male,28,1,0,15.85,S,Mr.,Train
+857,1,1,"Wick, Mrs. George Dennick (Mary Hitchcock)",female,45,1,1,164.87,S,Mrs.,Test
+527,1,2,"Ridsdale, Miss. Lucy",female,50,0,0,10.5,S,Miss,Train
+668,0,3,"Rommetvedt, Mr. Knud Paust",male,29.7,0,0,7.78,S,Mr.,Train
+456,1,3,"Jalsevac, Mr. Ivan",male,29,0,0,7.9,C,Mr.,Test
+242,1,3,"Murphy, Miss. Katherine ""Kate""",female,29.7,1,0,15.5,Q,Miss,Train
+583,0,2,"Downton, Mr. William James",male,54,0,0,26,S,Mr.,Train
+84,0,1,"Carrau, Mr. Francisco M",male,28,0,0,47.1,S,Mr.,Test
+208,1,3,"Albimona, Mr. Nassef Cassem",male,26,0,0,18.79,C,Mr.,Test
+613,1,3,"Murphy, Miss. Margaret Jane",female,29.7,1,0,15.5,Q,Miss,Train
+369,1,3,"Jermyn, Miss. Annie",female,29.7,0,0,7.75,Q,Miss,Test
+754,0,3,"Jonkoff, Mr. Lalio",male,23,0,0,7.9,S,Mr.,Test
+294,0,3,"Haas, Miss. Aloisia",female,24,0,0,8.85,S,Miss,Train
+299,1,1,"Saalfeld, Mr. Adolphe",male,29.7,0,0,30.5,S,Mr.,Train
+586,1,1,"Taussig, Miss. Ruth",female,18,0,2,79.65,S,Miss,Test
+120,0,3,"Andersson, Miss. Ellis Anna Maria",female,2,4,2,31.28,S,Miss,Train
+757,0,3,"Carlsson, Mr. August Sigfrid",male,28,0,0,7.8,S,Mr.,Train
+587,0,2,"Jarvis, Mr. John Denzil",male,47,0,0,15,S,Mr.,Train
+698,1,3,"Mullens, Miss. Katherine ""Katie""",female,29.7,0,0,7.73,Q,Miss,Test
+332,0,1,"Partner, Mr. Austen",male,45.5,0,0,28.5,S,Mr.,Test
+492,0,3,"Windelov, Mr. Einar",male,21,0,0,7.25,S,Mr.,Test
+21,0,2,"Fynney, Mr. Joseph J",male,35,0,0,26,S,Mr.,Train
+579,0,3,"Caram, Mrs. Joseph (Maria Elias)",female,29.7,1,0,14.46,C,Mrs.,Test
+479,0,3,"Karlsson, Mr. Nils August",male,22,0,0,7.52,S,Mr.,Train
+77,0,3,"Staneff, Mr. Ivan",male,29.7,0,0,7.9,S,Mr.,Train
+859,1,3,"Baclini, Mrs. Solomon (Latifa Qurban)",female,24,0,3,19.26,C,Mrs.,Train
+58,0,3,"Novel, Mr. Mansouer",male,28.5,0,0,7.23,C,Mr.,Train
+346,1,2,"Brown, Miss. Amelia ""Mildred""",female,24,0,0,13,S,Miss,Train
+136,0,2,"Richard, Mr. Emile",male,23,0,0,15.05,C,Mr.,Train
+640,0,3,"Thorneycroft, Mr. Percival",male,29.7,1,0,16.1,S,Mr.,Train
+731,1,1,"Allen, Miss. Elisabeth Walton",female,29,0,0,211.34,S,Miss,Test
+645,1,3,"Baclini, Miss. Eugenie",female,0.8,2,1,19.26,C,Miss,Train
+241,0,3,"Zabour, Miss. Thamine",female,29.7,1,0,14.45,C,Miss,Train
+178,0,1,"Isham, Miss. Ann Elizabeth",female,50,0,0,28.71,C,Miss,Train
+131,0,3,"Drazenoic, Mr. Jozef",male,33,0,0,7.9,C,Mr.,Train
+729,0,2,"Bryhl, Mr. Kurt Arnold Gottfrid",male,25,1,0,26,S,Mr.,Train
+420,0,3,"Van Impe, Miss. Catharina",female,10,0,2,24.15,S,Miss,Train
+64,0,3,"Skoog, Master. Harald",male,4,3,2,27.9,S,Master,Train
+425,0,3,"Rosblom, Mr. Viktor Richard",male,18,1,1,20.21,S,Mr.,Test
+163,0,3,"Bengtsson, Mr. John Viktor",male,26,0,0,7.78,S,Mr.,Test
+855,0,2,"Carter, Mrs. Ernest Courtenay (Lilian Hughes)",female,44,1,0,26,S,Mrs.,Train
+722,0,3,"Jensen, Mr. Svend Lauritz",male,17,1,0,7.05,S,Mr.,Train
+117,0,3,"Connors, Mr. Patrick",male,70.5,0,0,7.75,Q,Mr.,Train
+535,0,3,"Cacic, Miss. Marija",female,30,0,0,8.66,S,Miss,Test
+468,0,1,"Smart, Mr. John Montgomery",male,56,0,0,26.55,S,Mr.,Train
+773,0,2,"Mack, Mrs. (Mary)",female,57,0,0,10.5,S,Mrs.,Train
+764,1,1,"Carter, Mrs. William Ernest (Lucile Polk)",female,36,1,2,120,S,Mrs.,Test
+173,1,3,"Johnson, Miss. Eleanor Ileen",female,1,1,1,11.13,S,Miss,Train
+777,0,3,"Tobin, Mr. Roger",male,29.7,0,0,7.75,Q,Mr.,Train
+714,0,3,"Larsson, Mr. August Viktor",male,29,0,0,9.48,S,Mr.,Train
+649,0,3,"Willey, Mr. Edward",male,29.7,0,0,7.55,S,Mr.,Train
+99,1,2,"Doling, Mrs. John T (Ada Julia Bone)",female,34,0,1,23,S,Mrs.,Train
+595,0,2,"Chapman, Mr. John Henry",male,37,1,0,26,S,Mr.,Train
+719,0,3,"McEvoy, Mr. Michael",male,29.7,0,0,15.5,Q,Mr.,Train
+644,1,3,"Foo, Mr. Choong",male,29.7,0,0,56.5,S,Mr.,Test
+710,1,3,"Moubarek, Master. Halim Gonios (""William George"")",male,29.7,1,1,15.25,C,Master,Train
+191,1,2,"Pinsky, Mrs. (Rosa)",female,32,0,0,13,S,Mrs.,Test
+524,1,1,"Hippach, Mrs. Louis Albert (Ida Sophia Fischer)",female,44,0,1,57.98,C,Mrs.,Train
+554,1,3,"Leeni, Mr. Fahim (""Philip Zenni"")",male,22,0,0,7.23,C,Mr.,Train
+165,0,3,"Panula, Master. Eino Viljami",male,1,4,1,39.69,S,Master,Train
+508,1,1,"Bradley, Mr. George (""George Arthur Brayton"")",male,29.7,0,0,26.55,S,Mr.,Train
+890,1,1,"Behr, Mr. Karl Howell",male,26,0,0,30,C,Mr.,Train
+261,0,3,"Smith, Mr. Thomas",male,29.7,0,0,7.75,Q,Mr.,Train
+426,0,3,"Wiseman, Mr. Phillippe",male,29.7,0,0,7.25,S,Mr.,Train
+304,1,2,"Keane, Miss. Nora A",female,29.7,0,0,12.35,Q,Miss,Train
+221,1,3,"Sunderland, Mr. Victor Francis",male,16,0,0,8.05,S,Mr.,Test
+520,0,3,"Pavlovic, Mr. Stefo",male,32,0,0,7.9,S,Mr.,Train
+428,1,2,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",female,19,0,0,26,S,Miss,Test
+784,0,3,"Johnston, Mr. Andrew G",male,29.7,1,2,23.45,S,Mr.,Train
+335,1,1,"Frauenthal, Mrs. Henry William (Clara Heinsheimer)",female,29.7,1,0,133.65,S,Mrs.,Test
+378,0,1,"Widener, Mr. Harry Elkins",male,27,0,2,211.5,C,Mr.,Test
+883,0,3,"Dahlberg, Miss. Gerda Ulrika",female,22,0,0,10.52,S,Miss,Train
+142,1,3,"Nysten, Miss. Anna Sofia",female,22,0,0,7.75,S,Miss,Train
+772,0,3,"Jensen, Mr. Niels Peder",male,48,0,0,7.85,S,Mr.,Test
+7,0,1,"McCarthy, Mr. Timothy J",male,54,0,0,51.86,S,Mr.,Train
+254,0,3,"Lobb, Mr. William Arthur",male,30,1,0,16.1,S,Mr.,Train
+872,1,1,"Beckwith, Mrs. Richard Leonard (Sallie Monypeny)",female,47,1,1,52.55,S,Mrs.,Test
+42,0,2,"Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)",female,27,1,0,21,S,Mrs.,Train
+274,0,1,"Natsch, Mr. Charles H",male,37,0,1,29.7,C,Mr.,Train
+137,1,1,"Newsom, Miss. Helen Monypeny",female,19,0,2,26.28,S,Miss,Train
+251,0,3,"Reed, Mr. James George",male,29.7,0,0,7.25,S,Mr.,Train
+32,1,1,"Spencer, Mrs. William Augustus (Marie Eugenie)",female,29.7,1,0,146.52,C,Mrs.,Train
+391,1,1,"Carter, Mr. William Ernest",male,36,1,2,120,S,Mr.,Test
+431,1,1,"Bjornstrom-Steffansson, Mr. Mauritz Hakan",male,28,0,0,26.55,S,Mr.,Train
+418,1,2,"Silven, Miss. Lyyli Karoliina",female,18,0,2,13,S,Miss,Train
+601,1,2,"Jacobsohn, Mrs. Sidney Samuel (Amy Frances Christy)",female,24,2,1,27,S,Mrs.,Train
+135,0,2,"Sobey, Mr. Samuel James Hayden",male,25,0,0,13,S,Mr.,Train
+227,1,2,"Mellors, Mr. William John",male,19,0,0,10.5,S,Mr.,Test
+397,0,3,"Olsson, Miss. Elina",female,31,0,0,7.85,S,Miss,Train
+465,0,3,"Maisner, Mr. Simon",male,29.7,0,0,8.05,S,Mr.,Train
+839,1,3,"Chip, Mr. Chang",male,32,0,0,56.5,S,Mr.,Train
+287,1,3,"de Mulder, Mr. Theodore",male,30,0,0,9.5,S,Mr.,Train
+739,0,3,"Ivanoff, Mr. Kanio",male,29.7,0,0,7.9,S,Mr.,Train
+676,0,3,"Edvardsson, Mr. Gustaf Hjalmar",male,18,0,0,7.78,S,Mr.,Test
+760,1,1,"Rothes, the Countess. of (Lucy Noel Martha Dyer-Edwards)",female,33,0,0,86.5,S,Mrs.,Train
+231,1,1,"Harris, Mrs. Henry Birkhardt (Irene Wallach)",female,35,1,0,83.48,S,Mrs.,Train
+350,0,3,"Dimic, Mr. Jovan",male,42,0,0,8.66,S,Mr.,Train
+315,0,2,"Hart, Mr. Benjamin",male,43,1,1,26.25,S,Mr.,Train
+13,0,3,"Saundercock, Mr. William Henry",male,20,0,0,8.05,S,Mr.,Train
+753,0,3,"Vande Velde, Mr. Johannes Joseph",male,33,0,0,9.5,S,Mr.,Train
+26,1,3,"Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)",female,38,1,5,31.39,S,Mrs.,Train
+489,0,3,"Somerton, Mr. Francis William",male,30,0,0,8.05,S,Mr.,Train
+733,0,2,"Knight, Mr. Robert J",male,29.7,0,0,0,S,Mr.,Train
+102,0,3,"Petroff, Mr. Pastcho (""Pentcho"")",male,29.7,0,0,7.9,S,Mr.,Train
+265,0,3,"Henry, Miss. Delia",female,29.7,0,0,7.75,Q,Miss,Train
+548,1,2,"Padro y Manent, Mr. Julian",male,29.7,0,0,13.86,C,Mr.,Train
+159,0,3,"Smiljanic, Mr. Mile",male,29.7,0,0,8.66,S,Mr.,Train
+597,1,2,"Leitch, Miss. Jessie Wills",female,29.7,0,0,33,S,Miss,Test
+633,1,1,"Stahelin-Maeglin, Dr. Max",male,32,0,0,30.5,C,Honorary,Train
+746,0,1,"Crosby, Capt. Edward Gifford",male,70,1,1,71,S,Honorary,Train
+63,0,1,"Harris, Mr. Henry Birkhardt",male,45,1,0,83.48,S,Mr.,Train
+174,0,3,"Sivola, Mr. Antti Wilhelm",male,21,0,0,7.93,S,Mr.,Train
+557,1,1,"Duff Gordon, Lady. (Lucille Christiana Sutherland) (""Mrs Morgan"")",female,48,1,0,39.6,C,Mrs.,Train
+75,1,3,"Bing, Mr. Lee",male,32,0,0,56.5,S,Mr.,Train
+292,1,1,"Bishop, Mrs. Dickinson H (Helen Walton)",female,19,1,0,91.08,C,Mrs.,Test
+796,0,2,"Otter, Mr. Richard",male,39,0,0,13,S,Mr.,Train
+311,1,1,"Hays, Miss. Margaret Bechstein",female,24,0,0,83.16,C,Miss,Train
+571,1,2,"Harris, Mr. George",male,62,0,0,10.5,S,Mr.,Test
+745,1,3,"Stranden, Mr. Juho",male,31,0,0,7.93,S,Mr.,Train
+283,0,3,"de Pelsmaeker, Mr. Alfons",male,16,0,0,9.5,S,Mr.,Train
+398,0,2,"McKane, Mr. Peter David",male,46,0,0,26,S,Mr.,Train
+580,1,3,"Jussila, Mr. Eiriik",male,32,0,0,7.93,S,Mr.,Train
+101,0,3,"Petranec, Miss. Matilda",female,28,0,0,7.9,S,Miss,Train
+38,0,3,"Cann, Mr. Ernest Charles",male,21,0,0,8.05,S,Mr.,Train
+818,0,2,"Mallet, Mr. Albert",male,31,1,1,37,C,Mr.,Train
+334,0,3,"Vander Planke, Mr. Leo Edmondus",male,16,2,0,18,S,Mr.,Train
+105,0,3,"Gustafsson, Mr. Anders Vilhelm",male,37,2,0,7.93,S,Mr.,Test
+155,0,3,"Olsen, Mr. Ole Martin",male,29.7,0,0,7.31,S,Mr.,Train
+885,0,3,"Sutehall, Mr. Henry Jr",male,25,0,0,7.05,S,Mr.,Test
+268,1,3,"Persson, Mr. Ernst Ulrik",male,25,1,0,7.78,S,Mr.,Test
+255,0,3,"Rosblom, Mrs. Viktor (Helena Wilhelmina)",female,41,0,2,20.21,S,Mrs.,Test
+574,1,3,"Kelly, Miss. Mary",female,29.7,0,0,7.75,Q,Miss,Train
+368,1,3,"Moussa, Mrs. (Mantoura Boulos)",female,29.7,0,0,7.23,C,Mrs.,Train
+59,1,2,"West, Miss. Constance Mirium",female,5,1,2,27.75,S,Miss,Train
+738,1,1,"Lesurer, Mr. Gustave J",male,35,0,0,512.33,C,Mr.,Train
+180,0,3,"Leonard, Mr. Lionel",male,36,0,0,0,S,Mr.,Train
+458,1,1,"Kenyon, Mrs. Frederick R (Marion)",female,29.7,1,0,51.86,S,Mrs.,Train
+352,0,1,"Williams-Lambert, Mr. Fletcher Fellows",male,29.7,0,0,35,S,Mr.,Train
+825,0,3,"Panula, Master. Urho Abraham",male,2,4,1,39.69,S,Master,Test
+589,0,3,"Gilinski, Mr. Eliezer",male,22,0,0,8.05,S,Mr.,Train
+29,1,3,"O'Dwyer, Miss. Ellen ""Nellie""",female,29.7,0,0,7.88,Q,Miss,Test
+185,1,3,"Kink-Heilmann, Miss. Luise Gretchen",female,4,0,2,22.03,S,Miss,Train
+558,0,1,"Robbins, Mr. Victor",male,29.7,0,0,227.53,C,Mr.,Train
+755,1,2,"Herman, Mrs. Samuel (Jane Laver)",female,48,1,2,65,S,Mrs.,Test
+889,0,3,"Johnston, Miss. Catherine Helen ""Carrie""",female,29.7,1,2,23.45,S,Miss,Test
+880,1,1,"Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)",female,56,0,1,83.16,C,Mrs.,Train
+376,1,1,"Meyer, Mrs. Edgar Joseph (Leila Saks)",female,29.7,1,0,82.17,C,Mrs.,Train
+616,1,2,"Herman, Miss. Alice",female,24,1,2,65,S,Miss,Train
+362,0,2,"del Carlo, Mr. Sebastiano",male,29,1,0,27.72,C,Mr.,Train
+817,0,3,"Heininen, Miss. Wendla Maria",female,23,0,0,7.93,S,Miss,Train
+68,0,3,"Crease, Mr. Ernest James",male,19,0,0,8.16,S,Mr.,Test
+103,0,1,"White, Mr. Richard Frasar",male,21,0,1,77.29,S,Mr.,Train
+852,0,3,"Svensson, Mr. Johan",male,74,0,0,7.78,S,Mr.,Train
+628,1,1,"Longley, Miss. Gretchen Fiske",female,21,0,0,77.96,S,Miss,Train
+109,0,3,"Rekic, Mr. Tido",male,38,0,0,7.9,S,Mr.,Test
+17,0,3,"Rice, Master. Eugene",male,2,4,1,29.13,Q,Master,Train
+771,0,3,"Lievens, Mr. Rene Aime",male,24,0,0,9.5,S,Mr.,Train
+401,1,3,"Niskanen, Mr. Juha",male,39,0,0,7.93,S,Mr.,Test
+216,1,1,"Newell, Miss. Madeleine",female,31,1,0,113.28,C,Miss,Train
+436,1,1,"Carter, Miss. Lucile Polk",female,14,1,2,120,S,Miss,Train
+252,0,3,"Strom, Mrs. Wilhelm (Elna Matilda Persson)",female,29,1,1,10.46,S,Mrs.,Train
+72,0,3,"Goodwin, Miss. Lillian Amy",female,16,5,2,46.9,S,Miss,Test
+330,1,1,"Hippach, Miss. Jean Gertrude",female,16,0,1,57.98,C,Miss,Train
+389,0,3,"Sadlier, Mr. Matthew",male,29.7,0,0,7.73,Q,Mr.,Train
+842,0,2,"Mudd, Mr. Thomas Charles",male,16,0,0,10.5,S,Mr.,Train
+161,0,3,"Cribb, Mr. John Hatfield",male,44,0,1,16.1,S,Mr.,Train
+65,0,1,"Stewart, Mr. Albert A",male,29.7,0,0,27.72,C,Mr.,Train
+179,0,2,"Hale, Mr. Reginald",male,30,0,0,13,S,Mr.,Train
+695,0,1,"Weir, Col. John",male,60,0,0,26.55,S,Honorary,Train
+374,0,1,"Ringhini, Mr. Sante",male,22,0,0,135.63,C,Mr.,Train
+2,1,1,"Cumings, Mrs. John Bradley (Florence Briggs Thayer)",female,38,1,0,71.28,C,Mrs.,Train
+658,0,3,"Bourke, Mrs. John (Catherine)",female,32,1,1,15.5,Q,Mrs.,Train
+73,0,2,"Hood, Mr. Ambrose Jr",male,21,0,0,73.5,S,Mr.,Train
+76,0,3,"Moen, Mr. Sigurd Hansen",male,25,0,0,7.65,S,Mr.,Train
+319,1,1,"Wick, Miss. Mary Natalie",female,31,0,2,164.87,S,Miss,Train
+108,1,3,"Moss, Mr. Albert Johan",male,29.7,0,0,7.78,S,Mr.,Train
+830,1,1,"Stone, Mrs. George Nelson (Martha Evelyn)",female,62,0,0,80,S,Mrs.,Train
+651,0,3,"Mitkoff, Mr. Mito",male,29.7,0,0,7.9,S,Mr.,Test
+247,0,3,"Lindahl, Miss. Agda Thorilda Viktoria",female,25,0,0,7.78,S,Miss,Train
+400,1,2,"Trout, Mrs. William H (Jessie L)",female,28,0,0,12.65,S,Mrs.,Test
+53,1,1,"Harper, Mrs. Henry Sleeper (Myna Haxtun)",female,49,1,0,76.73,C,Mrs.,Train
+578,1,1,"Silvey, Mrs. William Baird (Alice Munger)",female,39,1,0,55.9,S,Mrs.,Test
+289,1,2,"Hosono, Mr. Masabumi",male,42,0,0,13,S,Mr.,Train
+35,0,1,"Meyer, Mr. Edgar Joseph",male,28,1,0,82.17,C,Mr.,Train
+396,0,3,"Johansson, Mr. Erik",male,22,0,0,7.8,S,Mr.,Train
+720,0,3,"Johnson, Mr. Malkolm Joackim",male,33,0,0,7.78,S,Mr.,Train
+721,1,2,"Harper, Miss. Annie Jessie ""Nina""",female,6,0,1,33,S,Miss,Test
+409,0,3,"Birkeland, Mr. Hans Martin Monsen",male,21,0,0,7.78,S,Mr.,Train
+239,0,2,"Pengelly, Mr. Frederick William",male,19,0,0,10.5,S,Mr.,Train
+66,1,3,"Moubarek, Master. Gerios",male,29.7,1,1,15.25,C,Master,Train
+342,1,1,"Fortune, Miss. Alice Elizabeth",female,24,3,2,263,S,Miss,Test
+417,1,2,"Drew, Mrs. James Vivian (Lulu Thorne Christian)",female,34,1,1,32.5,S,Mrs.,Train
+243,0,2,"Coleridge, Mr. Reginald Charles",male,29,0,0,10.5,S,Mr.,Train
+365,0,3,"O'Brien, Mr. Thomas",male,29.7,1,0,15.5,Q,Mr.,Test
+547,1,2,"Beane, Mrs. Edward (Ethel Clarke)",female,19,1,0,26,S,Mrs.,Train
+723,0,2,"Gillespie, Mr. William Henry",male,34,0,0,13,S,Mr.,Test
+453,0,1,"Foreman, Mr. Benjamin Laventall",male,30,0,0,27.75,C,Mr.,Train
+483,0,3,"Rouse, Mr. Richard Henry",male,50,0,0,8.05,S,Mr.,Train
+150,0,2,"Byles, Rev. Thomas Roussel Davids",male,42,0,0,13,S,Honorary,Train
+840,1,1,"Marechal, Mr. Pierre",male,29.7,0,0,29.7,C,Mr.,Test
+197,0,3,"Mernagh, Mr. Robert",male,29.7,0,0,7.75,Q,Mr.,Train
+181,0,3,"Sage, Miss. Constance Gladys",female,29.7,8,2,69.55,S,Miss,Train
+690,1,1,"Madill, Miss. Georgette Alexandra",female,15,0,1,211.34,S,Miss,Train
+386,0,2,"Davies, Mr. Charles Henry",male,18,0,0,73.5,S,Mr.,Train
+449,1,3,"Baclini, Miss. Marie Catherine",female,5,2,1,19.26,C,Miss,Train
+770,0,3,"Gronnestad, Mr. Daniel Danielsen",male,32,0,0,8.36,S,Mr.,Train
+778,1,3,"Emanuel, Miss. Virginia Ethel",female,5,0,0,12.48,S,Miss,Test
+272,1,3,"Tornquist, Mr. William Henry",male,25,0,0,0,S,Mr.,Train
+812,0,3,"Lester, Mr. James",male,39,0,0,24.15,S,Mr.,Test
+106,0,3,"Mionoff, Mr. Stoytcho",male,28,0,0,7.9,S,Mr.,Train
+481,0,3,"Goodwin, Master. Harold Victor",male,9,5,2,46.9,S,Master,Test
+74,0,3,"Chronopoulos, Mr. Apostolos",male,26,1,0,14.45,C,Mr.,Train
+244,0,3,"Maenpaa, Mr. Matti Alexanteri",male,22,0,0,7.13,S,Mr.,Train
+413,1,1,"Minahan, Miss. Daisy E",female,33,1,0,90,Q,Miss,Train
+553,0,3,"O'Brien, Mr. Timothy",male,29.7,0,0,7.83,Q,Mr.,Test
+229,0,2,"Fahlstrom, Mr. Arne Jonas",male,18,0,0,13,S,Mr.,Train
+565,0,3,"Meanwell, Miss. (Marion Ogden)",female,29.7,0,0,8.05,S,Miss,Train
+495,0,3,"Stanley, Mr. Edward Roland",male,21,0,0,8.05,S,Mr.,Train
+373,0,3,"Beavan, Mr. William Thomas",male,19,0,0,8.05,S,Mr.,Train
+188,1,1,"Romaine, Mr. Charles Hallace (""Mr C Rolmane"")",male,45,0,0,26.55,S,Mr.,Train
+474,1,2,"Jerwan, Mrs. Amin S (Marie Marthe Thuillard)",female,23,0,0,13.79,C,Mrs.,Test
+124,1,2,"Webber, Miss. Susan",female,32.5,0,0,13,S,Miss,Test
+573,1,1,"Flynn, Mr. John Irwin (""Irving"")",male,36,0,0,26.39,S,Mr.,Test
+637,0,3,"Leinonen, Mr. Antti Gustaf",male,32,0,0,7.93,S,Mr.,Train
+727,1,2,"Renouf, Mrs. Peter Henry (Lillian Jefferys)",female,30,3,0,21,S,Mrs.,Train
+786,0,3,"Harmer, Mr. Abraham (David Lishin)",male,25,0,0,7.25,S,Mr.,Train
+876,1,3,"Najib, Miss. Adele Kiamie ""Jane""",female,15,0,0,7.23,C,Miss,Train
+623,1,3,"Nakid, Mr. Sahid",male,20,1,1,15.74,C,Mr.,Train
+608,1,1,"Daniel, Mr. Robert Williams",male,27,0,0,30.5,S,Mr.,Train
+603,0,1,"Harrington, Mr. Charles H",male,29.7,0,0,42.4,S,Mr.,Train
+211,0,3,"Ali, Mr. Ahmed",male,24,0,0,7.05,S,Mr.,Test
+507,1,2,"Quick, Mrs. Frederick Charles (Jane Richards)",female,33,0,2,26,S,Mrs.,Train
+711,1,1,"Mayne, Mlle. Berthe Antonine (""Mrs de Villiers"")",female,24,0,0,49.5,C,Miss,Train
+367,1,1,"Warren, Mrs. Frank Manley (Anna Sophia Atkinson)",female,60,1,0,75.25,C,Mrs.,Train
+79,1,2,"Caldwell, Master. Alden Gates",male,0.8,0,2,29,S,Master,Train
+186,0,1,"Rood, Mr. Hugh Roscoe",male,29.7,0,0,50,S,Mr.,Train
+566,0,3,"Davies, Mr. Alfred J",male,24,2,0,24.15,S,Mr.,Train
+210,1,1,"Blank, Mr. Henry",male,40,0,0,31,C,Mr.,Test
+300,1,1,"Baxter, Mrs. James (Helene DeLaudeniere Chaput)",female,50,0,1,247.52,C,Mrs.,Train
+204,0,3,"Youseff, Mr. Gerious",male,45.5,0,0,7.23,C,Mr.,Train
+641,0,3,"Jensen, Mr. Hans Peder",male,20,0,0,7.85,S,Mr.,Train
+87,0,3,"Ford, Mr. William Neal",male,16,1,3,34.38,S,Mr.,Train
+795,0,3,"Dantcheff, Mr. Ristiu",male,25,0,0,7.9,S,Mr.,Test
+28,0,1,"Fortune, Mr. Charles Alexander",male,19,3,2,263,S,Mr.,Test
+871,0,3,"Balkic, Mr. Cerin",male,26,0,0,7.9,S,Mr.,Train
+624,0,3,"Hansen, Mr. Henry Damsgaard",male,21,0,0,7.85,S,Mr.,Train
+141,0,3,"Boulos, Mrs. Joseph (Sultana)",female,29.7,0,2,15.25,C,Mrs.,Test
+821,1,1,"Hays, Mrs. Charles Melville (Clara Jennings Gregg)",female,52,1,1,93.5,S,Mrs.,Train
+259,1,1,"Ward, Miss. Anna",female,35,0,0,512.33,C,Miss,Train
+686,0,2,"Laroche, Mr. Joseph Philippe Lemercier",male,25,1,2,41.58,C,Mr.,Test
+62,1,1,"Icard, Miss. Amelie",female,38,0,0,80,S,Miss,Train
+355,0,3,"Yousif, Mr. Wazli",male,29.7,0,0,7.23,C,Mr.,Test
+382,1,3,"Nakid, Miss. Maria (""Mary"")",female,1,0,2,15.74,C,Miss,Train
+694,0,3,"Saad, Mr. Khalil",male,25,0,0,7.23,C,Mr.,Train
+462,0,3,"Morley, Mr. William",male,34,0,0,8.05,S,Mr.,Train
+706,0,2,"Morley, Mr. Henry Samuel (""Mr Henry Marshall"")",male,39,0,0,26,S,Mr.,Train
+235,0,2,"Leyson, Mr. Robert William Norman",male,24,0,0,10.5,S,Mr.,Test
+226,0,3,"Berglund, Mr. Karl Ivar Sven",male,22,0,0,9.35,S,Mr.,Train
+751,1,2,"Wells, Miss. Joan",female,4,1,1,23,S,Miss,Train
+321,0,3,"Dennis, Mr. Samuel",male,22,0,0,7.25,S,Mr.,Test
+793,0,3,"Sage, Miss. Stella Anna",female,29.7,8,2,69.55,S,Miss,Train
+14,0,3,"Andersson, Mr. Anders Johan",male,39,1,5,31.28,S,Mr.,Test
+496,0,3,"Yousseff, Mr. Gerious",male,29.7,0,0,14.46,C,Mr.,Test
+679,0,3,"Goodwin, Mrs. Frederick (Augusta Tyler)",female,43,1,6,46.9,S,Mrs.,Test
+246,0,1,"Minahan, Dr. William Edward",male,44,2,0,90,Q,Honorary,Test
+232,0,3,"Larsson, Mr. Bengt Edvin",male,29,0,0,7.78,S,Mr.,Test
+780,1,1,"Robert, Mrs. Edward Scott (Elisabeth Walton McMillan)",female,43,0,1,211.34,S,Mrs.,Train
+158,0,3,"Corn, Mr. Harry",male,30,0,0,8.05,S,Mr.,Train
+551,1,1,"Thayer, Mr. John Borland Jr",male,17,0,2,110.88,C,Mr.,Train
+56,1,1,"Woolner, Mr. Hugh",male,29.7,0,0,35.5,S,Mr.,Train
+741,1,1,"Hawksford, Mr. Walter James",male,29.7,0,0,30,S,Mr.,Test
+513,1,1,"McGough, Mr. James Robert",male,36,0,0,26.29,S,Mr.,Train
+12,1,1,"Bonnell, Miss. Elizabeth",female,58,0,0,26.55,S,Miss,Test
+705,0,3,"Hansen, Mr. Henrik Juul",male,26,1,0,7.85,S,Mr.,Test
+23,1,3,"McGowan, Miss. Anna ""Annie""",female,15,0,0,8.03,Q,Miss,Train
+497,1,1,"Eustis, Miss. Elizabeth Mussey",female,54,1,0,78.27,C,Miss,Test
+501,0,3,"Calic, Mr. Petar",male,17,0,0,8.66,S,Mr.,Train
+370,1,1,"Aubart, Mme. Leontine Pauline",female,24,0,0,69.3,C,Mrs.,Train
+345,0,2,"Fox, Mr. Stanley Hubert",male,36,0,0,13,S,Mr.,Train
+732,0,3,"Hassan, Mr. Houssein G N",male,11,0,0,18.79,C,Mr.,Train
+680,1,1,"Cardeza, Mr. Thomas Drake Martinez",male,36,0,1,512.33,C,Mr.,Train
+133,0,3,"Robins, Mrs. Alexander A (Grace Charity Laury)",female,47,1,0,14.5,S,Mrs.,Train
+146,0,2,"Nicholls, Mr. Joseph Charles",male,19,1,1,36.75,S,Mr.,Train
+627,0,2,"Kirkland, Rev. Charles Leonard",male,57,0,0,12.35,Q,Honorary,Train
+356,0,3,"Vanden Steen, Mr. Leo Peter",male,28,0,0,9.5,S,Mr.,Train
+846,0,3,"Abbing, Mr. Anthony",male,42,0,0,7.55,S,Mr.,Train
+320,1,1,"Spedden, Mrs. Frederic Oakley (Margaretta Corning Stone)",female,40,1,1,134.5,C,Mrs.,Train
+533,0,3,"Elias, Mr. Joseph Jr",male,17,1,1,7.23,C,Mr.,Train
+482,0,2,"Frost, Mr. Anthony Wood ""Archie""",male,29.7,0,0,0,S,Mr.,Train
+800,0,3,"Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert)",female,30,1,1,24.15,S,Mrs.,Train
+424,0,3,"Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)",female,28,1,1,14.4,S,Mrs.,Train
+44,1,2,"Laroche, Miss. Simonne Marie Anne Andree",female,3,1,2,41.58,C,Miss,Train
+1,0,3,"Braund, Mr. Owen Harris",male,22,1,0,7.25,S,Mr.,Train
+856,1,3,"Aks, Mrs. Sam (Leah Rosen)",female,18,0,1,9.35,S,Mrs.,Test
+469,0,3,"Scanlan, Mr. James",male,29.7,0,0,7.73,Q,Mr.,Test
+490,1,3,"Coutts, Master. Eden Leslie ""Neville""",male,9,1,1,15.9,S,Master,Test
+681,0,3,"Peters, Miss. Katie",female,29.7,0,0,8.14,Q,Miss,Test
+862,0,2,"Giles, Mr. Frederick Edward",male,21,1,0,11.5,S,Mr.,Train
+276,1,1,"Andrews, Miss. Kornelia Theodosia",female,63,1,0,77.96,S,Miss,Train
+206,0,3,"Strom, Miss. Telma Matilda",female,2,0,1,10.46,S,Miss,Train
+811,0,3,"Alexander, Mr. William",male,26,0,0,7.89,S,Mr.,Test
+610,1,1,"Shutes, Miss. Elizabeth W",female,40,0,0,153.46,S,Miss,Train
+759,0,3,"Theobald, Mr. Thomas Leonard",male,34,0,0,8.05,S,Mr.,Train
+749,0,1,"Marvin, Mr. Daniel Warner",male,19,1,0,53.1,S,Mr.,Train
+792,0,2,"Gaskell, Mr. Alfred",male,16,0,0,26,S,Mr.,Train
+264,0,1,"Harrison, Mr. William",male,40,0,0,0,S,Mr.,Train
+659,0,2,"Eitemiller, Mr. George Floyd",male,23,0,0,13,S,Mr.,Train
+713,1,1,"Taylor, Mr. Elmer Zebley",male,48,1,0,52,S,Mr.,Test
+470,1,3,"Baclini, Miss. Helene Barbara",female,0.8,2,1,19.26,C,Miss,Train
+625,0,3,"Bowen, Mr. David John ""Dai""",male,21,0,0,16.1,S,Mr.,Train
+803,1,1,"Carter, Master. William Thornton II",male,11,1,2,120,S,Master,Train
+344,0,2,"Sedgwick, Mr. Charles Frederick Waddington",male,25,0,0,13,S,Mr.,Train
+865,0,2,"Gill, Mr. John William",male,24,0,0,13,S,Mr.,Train
+234,1,3,"Asplund, Miss. Lillian Gertrud",female,5,4,2,31.39,S,Miss,Test
+663,0,1,"Colley, Mr. Edward Pomeroy",male,47,0,0,25.59,S,Mr.,Train
+762,0,3,"Nirva, Mr. Iisakki Antino Aijo",male,41,0,0,7.13,S,Mr.,Train
+323,1,2,"Slayter, Miss. Hilda Mary",female,30,0,0,12.35,Q,Miss,Train
+94,0,3,"Dean, Mr. Bertram Frank",male,26,1,2,20.58,S,Mr.,Train
+290,1,3,"Connolly, Miss. Kate",female,22,0,0,7.75,Q,Miss,Test
+129,1,3,"Peter, Miss. Anna",female,29.7,1,1,22.36,C,Miss,Train
+515,0,3,"Coleff, Mr. Satio",male,24,0,0,7.5,S,Mr.,Test
+270,1,1,"Bissette, Miss. Amelia",female,35,0,0,135.63,S,Miss,Train
+790,0,1,"Guggenheim, Mr. Benjamin",male,46,0,0,79.2,C,Mr.,Train
+314,0,3,"Hendekovic, Mr. Ignjac",male,28,0,0,7.9,S,Mr.,Train
+622,1,1,"Kimball, Mr. Edwin Nelson Jr",male,42,1,0,52.55,S,Mr.,Test
+377,1,3,"Landergren, Miss. Aurora Adelia",female,22,0,0,7.25,S,Miss,Train
+478,0,3,"Braund, Mr. Lewis Richard",male,29,1,0,7.05,S,Mr.,Test
+217,1,3,"Honkanen, Miss. Eliina",female,27,0,0,7.93,S,Miss,Train
+295,0,3,"Mineff, Mr. Ivan",male,24,0,0,7.9,S,Mr.,Train
+83,1,3,"McDermott, Miss. Brigdet Delia",female,29.7,0,0,7.79,Q,Miss,Train
+50,0,3,"Arnold-Franchi, Mrs. Josef (Josefine Franchi)",female,18,1,0,17.8,S,Mrs.,Train
+799,0,3,"Ibrahim Shawah, Mr. Yousseff",male,30,0,0,7.23,C,Mr.,Train
+861,0,3,"Hansen, Mr. Claus Peter",male,41,2,0,14.11,S,Mr.,Train
+607,0,3,"Karaic, Mr. Milan",male,30,0,0,7.9,S,Mr.,Train
+328,1,2,"Ball, Mrs. (Ada E Hall)",female,36,0,0,13,S,Mrs.,Train
+284,1,3,"Dorking, Mr. Edward Arthur",male,19,0,0,8.05,S,Mr.,Train
+285,0,1,"Smith, Mr. Richard William",male,29.7,0,0,26,S,Mr.,Test
+390,1,2,"Lehmann, Miss. Bertha",female,17,0,0,12,C,Miss,Test
+160,0,3,"Sage, Master. Thomas Henry",male,29.7,8,2,69.55,S,Master,Test
+642,1,1,"Sagesser, Mlle. Emma",female,24,0,0,69.3,C,Miss,Test
+853,0,3,"Boulos, Miss. Nourelain",female,9,1,1,15.25,C,Miss,Train
+423,0,3,"Zimmerman, Mr. Leo",male,29,0,0,7.88,S,Mr.,Test
+16,1,2,"Hewlett, Mrs. (Mary D Kingcome)",female,55,0,0,16,S,Mrs.,Test
+412,0,3,"Hart, Mr. Henry",male,29.7,0,0,6.86,Q,Mr.,Test
+783,0,1,"Long, Mr. Milton Clyde",male,29,0,0,30,S,Mr.,Train
+460,0,3,"O'Connor, Mr. Maurice",male,29.7,0,0,7.75,Q,Mr.,Train
+278,0,2,"Parkes, Mr. Francis ""Frank""",male,29.7,0,0,0,S,Mr.,Train
+621,0,3,"Yasbeck, Mr. Antoni",male,27,1,0,14.45,C,Mr.,Train
+132,0,3,"Coelho, Mr. Domingos Fernandeo",male,20,0,0,7.05,S,Mr.,Test
+629,0,3,"Bostandyeff, Mr. Guentcho",male,26,0,0,7.9,S,Mr.,Test
+618,0,3,"Lobb, Mrs. William Arthur (Cordelia K Stanlick)",female,26,1,0,16.1,S,Mrs.,Train
+95,0,3,"Coxon, Mr. Daniel",male,59,0,0,7.25,S,Mr.,Test
+176,0,3,"Klasen, Mr. Klas Albin",male,18,1,1,7.85,S,Mr.,Train
+626,0,1,"Sutton, Mr. Frederick",male,61,0,0,32.32,S,Mr.,Test
+569,0,3,"Doharr, Mr. Tannous",male,29.7,0,0,7.23,C,Mr.,Train
+5,0,3,"Allen, Mr. William Henry",male,35,0,0,8.05,S,Mr.,Test
+801,0,2,"Ponesell, Mr. Martin",male,34,0,0,13,S,Mr.,Test
+387,0,3,"Goodwin, Master. Sidney Leonard",male,1,5,2,46.9,S,Master,Train
+869,0,3,"van Melkebeke, Mr. Philemon",male,29.7,0,0,9.5,S,Mr.,Train
+669,0,3,"Cook, Mr. Jacob",male,43,0,0,8.05,S,Mr.,Train
+660,0,1,"Newell, Mr. Arthur Webster",male,58,0,2,113.28,C,Mr.,Train
+286,0,3,"Stankovic, Mr. Ivan",male,33,0,0,8.66,C,Mr.,Test
+249,1,1,"Beckwith, Mr. Richard Leonard",male,37,1,1,52.55,S,Mr.,Test
+266,0,2,"Reeves, Mr. David",male,36,0,0,10.5,S,Mr.,Test
+61,0,3,"Sirayanian, Mr. Orsen",male,22,0,0,7.23,C,Mr.,Test
+630,0,3,"O'Connell, Mr. Patrick D",male,29.7,0,0,7.73,Q,Mr.,Train
+305,0,3,"Williams, Mr. Howard Hugh ""Harry""",male,29.7,0,0,8.05,S,Mr.,Train
+69,1,3,"Andersson, Miss. Erna Alexandra",female,17,4,2,7.93,S,Miss,Train
+700,0,3,"Humblen, Mr. Adolf Mathias Nicolai Olsen",male,42,0,0,7.65,S,Mr.,Train
+168,0,3,"Skoog, Mrs. William (Anna Bernhardina Karlsson)",female,45,1,4,27.9,S,Mrs.,Train
+740,0,3,"Nankoff, Mr. Minko",male,29.7,0,0,7.9,S,Mr.,Train
+411,0,3,"Sdycoff, Mr. Todor",male,29.7,0,0,7.9,S,Mr.,Train
+688,0,3,"Dakic, Mr. Branko",male,19,0,0,10.17,S,Mr.,Train
+874,0,3,"Vander Cruyssen, Mr. Victor",male,47,0,0,9,S,Mr.,Train
+785,0,3,"Ali, Mr. William",male,25,0,0,7.05,S,Mr.,Train
+499,0,1,"Allison, Mrs. Hudson J C (Bessie Waldo Daniels)",female,25,1,2,151.55,S,Mrs.,Test
+93,0,1,"Chaffee, Mr. Herbert Fuller",male,46,1,0,61.18,S,Mr.,Test
+631,1,1,"Barkworth, Mr. Algernon Henry Wilson",male,80,0,0,30,S,Mr.,Train
+635,0,3,"Skoog, Miss. Mabel",female,9,3,2,27.9,S,Miss,Train
+605,1,1,"Homer, Mr. Harry (""Mr E Haven"")",male,35,0,0,26.55,C,Mr.,Train
+223,0,3,"Green, Mr. George Henry",male,51,0,0,8.05,S,Mr.,Train
+841,0,3,"Alhomaki, Mr. Ilmari Rudolf",male,20,0,0,7.93,S,Mr.,Test
+359,1,3,"McGovern, Miss. Mary",female,29.7,0,0,7.88,Q,Miss,Train
+92,0,3,"Andreasson, Mr. Paul Edvin",male,20,0,0,7.85,S,Mr.,Test
+512,0,3,"Webber, Mr. James",male,29.7,0,0,8.05,S,Mr.,Train
+536,1,2,"Hart, Miss. Eva Miriam",female,7,0,2,26.25,S,Miss,Train
+701,1,1,"Astor, Mrs. John Jacob (Madeleine Talmadge Force)",female,18,1,0,227.53,C,Mrs.,Train
+457,0,1,"Millet, Mr. Francis Davis",male,65,0,0,26.55,S,Mr.,Train
+485,1,1,"Bishop, Mr. Dickinson H",male,25,1,0,91.08,C,Mr.,Train
+639,0,3,"Panula, Mrs. Juha (Maria Emilia Ojala)",female,41,0,5,39.69,S,Mrs.,Test
+827,0,3,"Lam, Mr. Len",male,29.7,0,0,56.5,S,Mr.,Train
+192,0,2,"Carbines, Mr. William",male,19,0,0,13,S,Mr.,Test
+593,0,3,"Elsbury, Mr. William James",male,47,0,0,7.25,S,Mr.,Train
+392,1,3,"Jansson, Mr. Carl Olof",male,21,0,0,7.8,S,Mr.,Test
+27,0,3,"Emir, Mr. Farred Chehab",male,29.7,0,0,7.23,C,Mr.,Test
+245,0,3,"Attalah, Mr. Sleiman",male,30,0,0,7.23,C,Mr.,Train
+293,0,2,"Levy, Mr. Rene Jacques",male,36,0,0,12.88,C,Mr.,Train
+145,0,2,"Andrew, Mr. Edgardo Samuel",male,18,0,0,11.5,S,Mr.,Train
+568,0,3,"Palsson, Mrs. Nils (Alma Cornelia Berglund)",female,29,0,4,21.08,S,Mrs.,Test
+273,1,2,"Mellinger, Mrs. (Elizabeth Anne Maidment)",female,41,0,1,19.5,S,Mrs.,Test
+201,0,3,"Vande Walle, Mr. Nestor Cyriel",male,28,0,0,9.5,S,Mr.,Train
+804,1,3,"Thomas, Master. Assad Alexander",male,0.4,0,1,8.52,C,Master,Train
+585,0,3,"Paulner, Mr. Uscher",male,29.7,0,0,8.71,C,Mr.,Train
+167,1,1,"Chibnall, Mrs. (Edith Martha Bowerman)",female,29.7,0,1,55,S,Mrs.,Test
+789,1,3,"Dean, Master. Bertram Vere",male,1,1,2,20.58,S,Master,Train
+530,0,2,"Hocking, Mr. Richard George",male,23,2,1,11.5,S,Mr.,Test
