@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Braze Brand Fonts & Colors Override */
@@ -81,53 +82,6 @@
     <script type="text/babel">
         const { useState, useEffect, useMemo } = React;
 
-        // --- MOCK DATA (Subset of Titanic Data for performance in browser) ---
-        // 0 = Died, 1 = Survived
-        const TITANIC_DATA = [
-            { id: 1, Survived: 0, Pclass: 3, Sex: 'male', Age: 22, SibSp: 1, Fare: 7.25, Embarked: 'S', Group: 'Train' },
-            { id: 2, Survived: 1, Pclass: 1, Sex: 'female', Age: 38, SibSp: 1, Fare: 71.28, Embarked: 'C', Group: 'Train' },
-            { id: 3, Survived: 1, Pclass: 3, Sex: 'female', Age: 26, SibSp: 0, Fare: 7.92, Embarked: 'S', Group: 'Test' },
-            { id: 4, Survived: 1, Pclass: 1, Sex: 'female', Age: 35, SibSp: 1, Fare: 53.1, Embarked: 'S', Group: 'Train' },
-            { id: 5, Survived: 0, Pclass: 3, Sex: 'male', Age: 35, SibSp: 0, Fare: 8.05, Embarked: 'S', Group: 'Train' },
-            { id: 6, Survived: 0, Pclass: 3, Sex: 'male', Age: 28, SibSp: 0, Fare: 8.45, Embarked: 'Q', Group: 'Test' },
-            { id: 7, Survived: 0, Pclass: 1, Sex: 'male', Age: 54, SibSp: 0, Fare: 51.86, Embarked: 'S', Group: 'Train' },
-            { id: 8, Survived: 0, Pclass: 3, Sex: 'male', Age: 2, SibSp: 3, Fare: 21.07, Embarked: 'S', Group: 'Train' },
-            { id: 9, Survived: 1, Pclass: 3, Sex: 'female', Age: 27, SibSp: 0, Fare: 11.13, Embarked: 'S', Group: 'Train' },
-            { id: 10, Survived: 1, Pclass: 2, Sex: 'female', Age: 14, SibSp: 1, Fare: 30.07, Embarked: 'C', Group: 'Test' },
-            { id: 11, Survived: 1, Pclass: 3, Sex: 'female', Age: 4, SibSp: 1, Fare: 16.7, Embarked: 'S', Group: 'Train' },
-            { id: 12, Survived: 1, Pclass: 1, Sex: 'female', Age: 58, SibSp: 0, Fare: 26.55, Embarked: 'S', Group: 'Train' },
-            { id: 13, Survived: 0, Pclass: 3, Sex: 'male', Age: 20, SibSp: 0, Fare: 8.05, Embarked: 'S', Group: 'Test' },
-            { id: 14, Survived: 0, Pclass: 3, Sex: 'male', Age: 39, SibSp: 1, Fare: 31.27, Embarked: 'S', Group: 'Train' },
-            { id: 15, Survived: 0, Pclass: 3, Sex: 'female', Age: 14, SibSp: 0, Fare: 7.85, Embarked: 'S', Group: 'Test' },
-            { id: 16, Survived: 1, Pclass: 2, Sex: 'female', Age: 55, SibSp: 0, Fare: 16.0, Embarked: 'S', Group: 'Train' },
-            { id: 17, Survived: 0, Pclass: 3, Sex: 'male', Age: 2, SibSp: 4, Fare: 29.12, Embarked: 'Q', Group: 'Train' },
-            { id: 18, Survived: 1, Pclass: 2, Sex: 'male', Age: 30, SibSp: 0, Fare: 13.0, Embarked: 'S', Group: 'Test' },
-            { id: 19, Survived: 0, Pclass: 3, Sex: 'female', Age: 31, SibSp: 1, Fare: 18.0, Embarked: 'S', Group: 'Train' },
-            { id: 20, Survived: 1, Pclass: 3, Sex: 'female', Age: 15, SibSp: 0, Fare: 7.22, Embarked: 'C', Group: 'Train' },
-            { id: 21, Survived: 0, Pclass: 2, Sex: 'male', Age: 35, SibSp: 0, Fare: 26.0, Embarked: 'S', Group: 'Test' },
-            { id: 22, Survived: 1, Pclass: 2, Sex: 'male', Age: 34, SibSp: 0, Fare: 13.0, Embarked: 'S', Group: 'Train' },
-            { id: 23, Survived: 1, Pclass: 3, Sex: 'female', Age: 15, SibSp: 0, Fare: 8.02, Embarked: 'Q', Group: 'Train' },
-            { id: 24, Survived: 1, Pclass: 1, Sex: 'male', Age: 28, SibSp: 0, Fare: 35.5, Embarked: 'S', Group: 'Train' },
-            { id: 25, Survived: 0, Pclass: 3, Sex: 'female', Age: 8, SibSp: 3, Fare: 21.07, Embarked: 'S', Group: 'Test' },
-            { id: 26, Survived: 1, Pclass: 3, Sex: 'female', Age: 38, SibSp: 1, Fare: 31.38, Embarked: 'S', Group: 'Train' },
-            { id: 27, Survived: 0, Pclass: 3, Sex: 'male', Age: 26, SibSp: 0, Fare: 7.22, Embarked: 'C', Group: 'Train' },
-            { id: 28, Survived: 0, Pclass: 1, Sex: 'male', Age: 19, SibSp: 3, Fare: 263.0, Embarked: 'S', Group: 'Test' },
-            { id: 29, Survived: 1, Pclass: 3, Sex: 'female', Age: 21, SibSp: 0, Fare: 7.75, Embarked: 'Q', Group: 'Train' },
-            { id: 30, Survived: 0, Pclass: 3, Sex: 'male', Age: 24, SibSp: 0, Fare: 7.89, Embarked: 'S', Group: 'Train' },
-            { id: 31, Survived: 0, Pclass: 3, Sex: 'male', Age: 60, SibSp: 0, Fare: 7.89, Embarked: 'S', Group: 'Train' },
-            { id: 32, Survived: 1, Pclass: 1, Sex: 'female', Age: 22, SibSp: 0, Fare: 151, Embarked: 'C', Group: 'Train' },
-            { id: 33, Survived: 0, Pclass: 3, Sex: 'male', Age: 42, SibSp: 0, Fare: 7.89, Embarked: 'S', Group: 'Test' },
-            { id: 34, Survived: 1, Pclass: 1, Sex: 'female', Age: 45, SibSp: 1, Fare: 80, Embarked: 'S', Group: 'Train' },
-            { id: 35, Survived: 1, Pclass: 2, Sex: 'female', Age: 29, SibSp: 1, Fare: 26, Embarked: 'S', Group: 'Train' },
-            { id: 36, Survived: 0, Pclass: 3, Sex: 'male', Age: 21, SibSp: 0, Fare: 7.8, Embarked: 'S', Group: 'Test' },
-            { id: 37, Survived: 0, Pclass: 3, Sex: 'male', Age: 30, SibSp: 0, Fare: 7.22, Embarked: 'C', Group: 'Train' },
-            { id: 38, Survived: 0, Pclass: 3, Sex: 'male', Age: 2, SibSp: 1, Fare: 11.5, Embarked: 'S', Group: 'Test' },
-            { id: 39, Survived: 1, Pclass: 3, Sex: 'female', Age: 18, SibSp: 0, Fare: 7.8, Embarked: 'S', Group: 'Train' },
-            { id: 40, Survived: 1, Pclass: 2, Sex: 'female', Age: 3, SibSp: 1, Fare: 26, Embarked: 'S', Group: 'Train' },
-            { id: 41, Survived: 1, Pclass: 3, Sex: 'female', Age: 19, SibSp: 0, Fare: 7.87, Embarked: 'Q', Group: 'Train' },
-            { id: 42, Survived: 0, Pclass: 2, Sex: 'male', Age: 25, SibSp: 1, Fare: 13, Embarked: 'S', Group: 'Test' },
-        ];
-        
         // --- HELPER FUNCTIONS ---
 
         const getAttributes = () => [
@@ -162,46 +116,44 @@
             return rate > 0.5 ? 1 : 0;
         };
 
-        const predictSingleTree = (row, treeConfig) => {
+        const predictSingleTree = (row, treeConfig, allTrainingData) => {
             // Root
             if (evaluateCondition(row, treeConfig.root)) {
                 // Went Left (True)
                 if (evaluateCondition(row, treeConfig.leftNode)) {
-                    // Left-Left Leaf Logic:
-                    // We need to simulate the data flow to know the automatic prediction? 
-                    // No, for individual row prediction, we just need the rule. 
-                    // BUT, the rule depends on the Training Data majority vote at that leaf.
-                    // To keep it simple and performant, we will dynamically calculate the majority vote 
-                    // based on the FULL training set passed to the component, OR we store the vote in the config.
-                    // For this app, let's recalculate the vote on the fly based on the global TITANIC_DATA.
-                    // In a real production app, we would "train" the model and save the leaf values.
-                    
-                    const rootTrueData = TITANIC_DATA.filter(d => d.Group === 'Train' && evaluateCondition(d, treeConfig.root));
+                    // Left-Left Leaf
+                    // To perform automatic prediction on a single row, we need to know the majority vote of the TRAINING data at this leaf.
+                    // We calculate this dynamically based on the full training set.
+                    const rootTrueData = allTrainingData.filter(d => evaluateCondition(d, treeConfig.root));
                     const leafData = rootTrueData.filter(d => evaluateCondition(d, treeConfig.leftNode));
                     return getPredictionForLeaf(leafData);
                 } else {
-                    const rootTrueData = TITANIC_DATA.filter(d => d.Group === 'Train' && evaluateCondition(d, treeConfig.root));
+                    // Left-Right Leaf
+                    const rootTrueData = allTrainingData.filter(d => evaluateCondition(d, treeConfig.root));
                     const leafData = rootTrueData.filter(d => !evaluateCondition(d, treeConfig.leftNode));
                     return getPredictionForLeaf(leafData);
                 }
             } else {
                 // Went Right (False)
                 if (evaluateCondition(row, treeConfig.rightNode)) {
-                    const rootFalseData = TITANIC_DATA.filter(d => d.Group === 'Train' && !evaluateCondition(d, treeConfig.root));
+                    // Right-Left Leaf
+                    const rootFalseData = allTrainingData.filter(d => !evaluateCondition(d, treeConfig.root));
                     const leafData = rootFalseData.filter(d => evaluateCondition(d, treeConfig.rightNode));
                     return getPredictionForLeaf(leafData);
                 } else {
-                    const rootFalseData = TITANIC_DATA.filter(d => d.Group === 'Train' && !evaluateCondition(d, treeConfig.root));
+                    // Right-Right Leaf
+                    const rootFalseData = allTrainingData.filter(d => !evaluateCondition(d, treeConfig.root));
                     const leafData = rootFalseData.filter(d => !evaluateCondition(d, treeConfig.rightNode));
                     return getPredictionForLeaf(leafData);
                 }
             }
         };
 
-        const calculateAccuracy = (data, treeConfig) => {
+        const calculateAccuracy = (data, treeConfig, allTrainingData) => {
+            if (!data || data.length === 0) return 0;
             let correct = 0;
             data.forEach(row => {
-                const prediction = predictSingleTree(row, treeConfig);
+                const prediction = predictSingleTree(row, treeConfig, allTrainingData);
                 if (prediction === row.Survived) correct++;
             });
             return (correct / data.length * 100).toFixed(1);
@@ -222,7 +174,7 @@
                         </div>
                     </div>
                     <nav className="hidden md:flex space-x-1">
-                        {['Intro', 'Data', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble'].map(tab => (
+                        {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble', 'Data'].map(tab => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -238,7 +190,7 @@
                     </nav>
                 </div>
                 <div className="md:hidden flex overflow-x-auto pb-2 px-2 space-x-2 scrollbar-hide">
-                     {['Intro', 'Data', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble'].map(tab => (
+                     {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble', 'Data'].map(tab => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -285,7 +237,7 @@
                     
                     <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm text-blue-800">
                         <i className="fas fa-info-circle mr-2"></i>
-                        <strong>Tip:</strong> The <strong>Data Tab</strong> is now available to explore the passenger list and find patterns!
+                        <strong>Tip:</strong> The <strong>Data Tab</strong> is now available at the end to explore your CSV data!
                     </div>
 
                     <button 
@@ -326,17 +278,14 @@
                 setSortConfig({ key, direction });
             };
 
-            const getClassNamesFor = (name) => {
-                if (!sortConfig) return;
-                return sortConfig.key === name ? sortConfig.direction : undefined;
-            };
-
             return (
                 <div className="max-w-6xl mx-auto mt-6 px-4">
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                         <div className="p-6 border-b border-gray-200">
                             <h2 className="text-2xl font-bold text-[#300266]">Passenger Data</h2>
-                            <p className="text-sm text-gray-500">Explore the dataset to find patterns.</p>
+                            <p className="text-sm text-gray-500">
+                                Loaded {data.length} records from <code>data/titanicdata.csv</code>.
+                            </p>
                         </div>
                         <div className="overflow-x-auto max-h-[70vh]">
                             <table className="min-w-full divide-y divide-gray-200">
@@ -505,8 +454,8 @@
             const trainData = data.filter(d => d.Group === 'Train');
             const testData = data.filter(d => d.Group === 'Test');
 
-            const trainAcc = calculateAccuracy(trainData, config);
-            const testAcc = calculateAccuracy(testData, config);
+            const trainAcc = calculateAccuracy(trainData, config, trainData);
+            const testAcc = calculateAccuracy(testData, config, trainData);
 
             // Determine if overfitting (Train much higher than Test)
             const isOverfitting = (parseFloat(trainAcc) - parseFloat(testAcc)) > 15;
@@ -651,13 +600,14 @@
         };
 
         const EnsembleView = ({ configs, data }) => {
+            const trainData = data.filter(d => d.Group === 'Train');
             const testData = data.filter(d => d.Group === 'Test');
             
             // Calculate individual stats
             const stats = configs.map((cfg, idx) => {
                 let correct = 0;
                 testData.forEach(row => {
-                    if (predictSingleTree(row, cfg) === row.Survived) correct++;
+                    if (predictSingleTree(row, cfg, trainData) === row.Survived) correct++;
                 });
                 return { id: idx + 1, acc: (correct / testData.length * 100).toFixed(1) };
             });
@@ -665,9 +615,9 @@
             // Calculate Ensemble Stats (Majority Vote)
             let ensembleCorrect = 0;
             testData.forEach(row => {
-                const v1 = predictSingleTree(row, configs[0]);
-                const v2 = predictSingleTree(row, configs[1]);
-                const v3 = predictSingleTree(row, configs[2]);
+                const v1 = predictSingleTree(row, configs[0], trainData);
+                const v2 = predictSingleTree(row, configs[1], trainData);
+                const v3 = predictSingleTree(row, configs[2], trainData);
                 
                 const sum = v1 + v2 + v3;
                 const prediction = sum >= 2 ? 1 : 0; // Majority vote
@@ -740,7 +690,55 @@
 
         const App = () => {
             const [activeTab, setActiveTab] = useState('Intro');
+            const [data, setData] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
             
+            // Load Data on Mount
+            useEffect(() => {
+                fetch('data/titanicdata.csv')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Could not fetch data. Ensure 'data/titanicdata.csv' exists relative to index.html");
+                        }
+                        return response.text();
+                    })
+                    .then(csvText => {
+                        Papa.parse(csvText, {
+                            header: true,
+                            skipEmptyLines: true,
+                            dynamicTyping: true, // Automatically converts numbers
+                            complete: (results) => {
+                                // Transform keys to match App expectations if necessary
+                                // CSV Headers: PassengerId, Survived, TicketClass, Name, Sex, Age, SibSp, ParCh, Fare, Embarked, Title, Train/Test Group
+                                // App Expects: id, Survived, Pclass, Sex, Age, SibSp, Fare, Embarked, Group
+                                const transformed = results.data.map(row => ({
+                                    id: row['PassengerId'],
+                                    Survived: row['Survived'],
+                                    Pclass: row['TicketClass'],
+                                    Sex: row['Sex'],
+                                    Age: row['Age'],
+                                    SibSp: row['SibSp'],
+                                    Fare: row['Fare'],
+                                    Embarked: row['Embarked'],
+                                    Group: row['Train/Test Group']
+                                }));
+                                setData(transformed);
+                                setLoading(false);
+                            },
+                            error: (err) => {
+                                setError(err.message);
+                                setLoading(false);
+                            }
+                        });
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        setError(err.message);
+                        setLoading(false);
+                    });
+            }, []);
+
             // Default Configs for 3 Trees
             const defaultTree = {
                 root: { feature: 'Sex', operator: '=', value: 'male', type: 'categorical' },
@@ -756,6 +754,31 @@
             const [tree2, setTree2] = useState({...defaultTree, root: { feature: 'Fare', operator: '>', value: 20, type: 'numeric' }});
             const [tree3, setTree3] = useState({...defaultTree, root: { feature: 'Pclass', operator: '=', value: 3, type: 'categorical' }});
 
+            if (loading) {
+                return (
+                    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+                        <div className="w-16 h-16 border-4 border-[#C9C4EF] border-t-[#801ED7] rounded-full animate-spin mb-4"></div>
+                        <h2 className="text-[#300266] font-bold text-xl">Loading Titanic Data...</h2>
+                    </div>
+                );
+            }
+
+            if (error) {
+                return (
+                    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+                        <div className="bg-white p-8 rounded-xl shadow-lg max-w-lg text-center border-l-4 border-red-500">
+                            <i className="fa-solid fa-triangle-exclamation text-red-500 text-4xl mb-4"></i>
+                            <h2 className="text-red-700 font-bold text-xl mb-2">Error Loading Data</h2>
+                            <p className="text-gray-600 mb-4">{error}</p>
+                            <div className="bg-gray-100 p-4 rounded text-sm text-left font-mono">
+                                Expected Path: /data/titanicdata.csv<br/>
+                                Check your browser console for more details.
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+
             return (
                 <div className="min-h-screen bg-gray-50 pb-20">
                     <Header activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -763,14 +786,14 @@
                     <main>
                         {activeTab === 'Intro' && <Intro onStart={() => setActiveTab('Tree 1')} />}
 
-                        {activeTab === 'Data' && <DataView data={TITANIC_DATA} />}
+                        {activeTab === 'Data' && <DataView data={data} />}
                         
                         {activeTab === 'Tree 1' && (
                             <TreeBuilder 
                                 treeId={1} 
                                 config={tree1} 
                                 setConfig={setTree1} 
-                                data={TITANIC_DATA} 
+                                data={data} 
                             />
                         )}
                         
@@ -779,7 +802,7 @@
                                 treeId={2} 
                                 config={tree2} 
                                 setConfig={setTree2} 
-                                data={TITANIC_DATA} 
+                                data={data} 
                             />
                         )}
                         
@@ -788,14 +811,14 @@
                                 treeId={3} 
                                 config={tree3} 
                                 setConfig={setTree3} 
-                                data={TITANIC_DATA} 
+                                data={data} 
                             />
                         )}
 
                         {activeTab === 'Ensemble' && (
                             <EnsembleView 
                                 configs={[tree1, tree2, tree3]} 
-                                data={TITANIC_DATA} 
+                                data={data} 
                             />
                         )}
                     </main>
