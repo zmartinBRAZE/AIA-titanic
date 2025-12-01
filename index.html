@@ -61,18 +61,14 @@
             z-index: 100;
             margin-bottom: 0.5rem;
         }
-        .node-connector {
-            position: absolute;
-            background-color: #CBD5E1;
-            z-index: 0;
+        
+        /* Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #68D391;
         }
-        .node-label {
-            position: absolute;
-            background-color: white;
-            padding: 0 4px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            z-index: 1;
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #68D391;
         }
     </style>
 </head>
@@ -90,16 +86,26 @@
             { key: 'Pclass', type: 'categorical', options: [1, 2, 3], help: 'Ticket Class (1st, 2nd, 3rd)' },
             { key: 'Fare', type: 'numeric', min: 0, max: 500, help: 'Ticket fare cost' },
             { key: 'SibSp', type: 'numeric', min: 0, max: 8, help: '# of siblings / spouses aboard' },
-            { key: 'Embarked', type: 'categorical', options: ['S', 'C', 'Q'], help: 'Port: Southampton, Cherbourg, Queenstown' }
+            { key: 'Embarked', type: 'categorical', options: ['S', 'C', 'Q'], help: 'Port: Southampton, Cherbourg, Queenstown' },
+            { key: 'Title', type: 'categorical', options: ['Mr.', 'Mrs.', 'Miss', 'Master', 'Dr.', 'Rev.', 'Col.', 'Major', 'Capt.', 'Don.', 'Dona.', 'Jonkheer', 'Countess', 'Lady', 'Sir', 'Mme', 'Ms'], help: 'Title extracted from name' }
         ];
 
         const evaluateCondition = (row, condition) => {
             const val = row[condition.feature];
+            
+            // Handle missing values
+            if (val === undefined || val === null) return false;
+
             if (condition.type === 'categorical') {
-                return String(val) === String(condition.value);
+                // Loose equality for categorical to handle string/number differences (e.g. "3" vs 3)
+                return String(val).trim().toLowerCase() === String(condition.value).trim().toLowerCase();
             } else {
+                // Strict numeric conversion
                 const rowVal = parseFloat(val);
                 const condVal = parseFloat(condition.value);
+                
+                if (isNaN(rowVal) || isNaN(condVal)) return false;
+
                 if (condition.operator === '>') return rowVal > condVal;
                 if (condition.operator === '<') return rowVal < condVal;
                 if (condition.operator === '=') return rowVal === condVal;
@@ -110,7 +116,7 @@
         };
 
         const getPredictionForLeaf = (leafData) => {
-            if (leafData.length === 0) return 0; // Default if empty
+            if (!leafData || leafData.length === 0) return 0; // Default if empty
             const survived = leafData.filter(r => r.Survived === 1).length;
             const rate = survived / leafData.length;
             return rate > 0.5 ? 1 : 0;
@@ -121,9 +127,7 @@
             if (evaluateCondition(row, treeConfig.root)) {
                 // Went Left (True)
                 if (evaluateCondition(row, treeConfig.leftNode)) {
-                    // Left-Left Leaf
-                    // To perform automatic prediction on a single row, we need to know the majority vote of the TRAINING data at this leaf.
-                    // We calculate this dynamically based on the full training set.
+                    // Left-Left Leaf - PREDICTION BASED ON TRAINING DATA MAJORITY
                     const rootTrueData = allTrainingData.filter(d => evaluateCondition(d, treeConfig.root));
                     const leafData = rootTrueData.filter(d => evaluateCondition(d, treeConfig.leftNode));
                     return getPredictionForLeaf(leafData);
@@ -174,7 +178,7 @@
                         </div>
                     </div>
                     <nav className="hidden md:flex space-x-1">
-                        {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble', 'Data'].map(tab => (
+                        {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Results', 'Data'].map(tab => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -190,7 +194,7 @@
                     </nav>
                 </div>
                 <div className="md:hidden flex overflow-x-auto pb-2 px-2 space-x-2 scrollbar-hide">
-                     {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Ensemble', 'Data'].map(tab => (
+                     {['Intro', 'Tree 1', 'Tree 2', 'Tree 3', 'Results', 'Data'].map(tab => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -230,7 +234,7 @@
                         </div>
                         <div className="p-6 bg-[#FFD4BC]/30 rounded-xl border border-[#FFD4BC] hover:shadow-md transition-shadow">
                             <i className="fa-solid fa-people-group text-[#E9371F] text-3xl mb-3"></i>
-                            <h3 className="font-bold text-[#E9371F] text-lg">3. Ensemble</h3>
+                            <h3 className="font-bold text-[#E9371F] text-lg">3. Results</h3>
                             <p className="text-sm text-gray-600 mt-2">Combine all 3 trees to create a superior "Forest" model via voting.</p>
                         </div>
                     </div>
@@ -279,7 +283,7 @@
             };
 
             return (
-                <div className="max-w-6xl mx-auto mt-6 px-4">
+                <div className="max-w-7xl mx-auto mt-6 px-4">
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                         <div className="p-6 border-b border-gray-200">
                             <h2 className="text-2xl font-bold text-[#300266]">Passenger Data</h2>
@@ -291,11 +295,11 @@
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50 sticky top-0 z-10">
                                     <tr>
-                                        {['id', 'Survived', 'Pclass', 'Sex', 'Age', 'SibSp', 'Fare', 'Embarked', 'Group'].map(key => (
+                                        {['id', 'Survived', 'Pclass', 'Name', 'Title', 'Sex', 'Age', 'SibSp', 'Fare', 'Embarked', 'Group'].map(key => (
                                             <th 
                                                 key={key}
                                                 onClick={() => requestSort(key)}
-                                                className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                                className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 whitespace-nowrap"
                                             >
                                                 <div className="flex items-center gap-1">
                                                     {key}
@@ -317,6 +321,8 @@
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.Pclass}</td>
+                                            <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate" title={row.Name}>{row.Name}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.Title}</td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.Sex}</td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.Age}</td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.SibSp}</td>
@@ -334,12 +340,12 @@
         };
 
         const StatBox = ({ data, label }) => {
-            const count = data.length;
-            const survived = data.filter(r => r.Survived === 1).length;
+            const count = data ? data.length : 0;
+            const survived = data ? data.filter(r => r.Survived === 1).length : 0;
             const rate = count > 0 ? ((survived / count) * 100).toFixed(0) : 0;
             
             return (
-                <div className="mt-2 bg-white/80 p-2 rounded text-xs w-full border border-gray-200 shadow-sm text-center">
+                <div className="mb-2 bg-white/90 p-2 rounded text-xs w-full border border-gray-200 shadow-sm text-center">
                     <div className="font-bold text-[#300266] border-b border-gray-100 mb-1 pb-1">{label}</div>
                     <div className="grid grid-cols-2 gap-1 text-[10px]">
                         <div className="text-gray-500">Total:</div>
@@ -365,7 +371,10 @@
                         {label}
                     </div>
                     
-                    <div className="flex flex-col gap-3 mt-2">
+                    <div className="flex flex-col gap-2 mt-2">
+                        {/* Statistics moved ABOVE selection */}
+                        <StatBox data={nodeData} label={description || "All Passengers"} />
+
                         <div className="flex gap-2 relative">
                             <div className="w-full relative tooltip-trigger" data-tooltip={selectedAttr?.help}>
                                 <select 
@@ -409,16 +418,14 @@
                                 onChange={(e) => handleChange('value', e.target.value)}
                             />
                         )}
-                        
-                        <StatBox data={nodeData} label={description || "All Passengers"} />
                     </div>
                 </div>
             );
         };
 
         const LeafNode = ({ data, description }) => {
-            const count = data.length;
-            const survived = data.filter(r => r.Survived === 1).length;
+            const count = data ? data.length : 0;
+            const survived = data ? data.filter(r => r.Survived === 1).length : 0;
             const rate = count > 0 ? (survived / count) : 0;
             const prediction = rate > 0.5 ? 1 : 0;
 
@@ -450,23 +457,26 @@
             );
         };
 
-        const TreeBuilder = ({ treeId, config, setConfig, data }) => {
+        const TreeBuilder = ({ treeId, config, setConfig, data, evaluationMode }) => {
             const trainData = data.filter(d => d.Group === 'Train');
             const testData = data.filter(d => d.Group === 'Test');
 
             const trainAcc = calculateAccuracy(trainData, config, trainData);
             const testAcc = calculateAccuracy(testData, config, trainData);
+            
+            const accuracyDiff = (parseFloat(testAcc) - parseFloat(trainAcc)).toFixed(1);
 
-            // Determine if overfitting (Train much higher than Test)
-            const isOverfitting = (parseFloat(trainAcc) - parseFloat(testAcc)) > 15;
+            // Determine which data to flow through the tree visualizer
+            const activeData = evaluationMode === 'Test' ? testData : trainData;
+            const activeDataName = evaluationMode === 'Test' ? 'Test Data' : 'Training Data';
 
             const updateNode = (nodeKey, newConfig) => {
                 setConfig(prev => ({ ...prev, [nodeKey]: newConfig }));
             };
 
-            // --- DATA SUBSET CALCULATION ---
+            // --- DATA SUBSET CALCULATION (Using Active Data) ---
             // Root
-            const rootData = trainData;
+            const rootData = activeData;
             
             // Level 1 Splits
             const leftData = rootData.filter(d => evaluateCondition(d, config.root));
@@ -487,37 +497,50 @@
             const rightDesc = `${config.rightNode.feature} ${config.rightNode.operator === '=' ? '' : config.rightNode.operator} ${config.rightNode.value}`;
 
             return (
-                <div className="max-w-7xl mx-auto mt-6 px-4">
+                <div className="max-w-[1400px] mx-auto mt-6 px-4">
                     {/* Stats Header */}
                     <div className="bg-white rounded-xl shadow p-4 mb-8 flex flex-col md:flex-row justify-between items-center border-l-4 border-[#801ED7]">
                         <div>
                             <h2 className="text-2xl font-bold text-[#300266]">Decision Tree #{treeId}</h2>
-                            <p className="text-sm text-gray-500">Configure nodes. Predictions are automatic based on majority vote > 50%.</p>
+                            <p className="text-sm text-gray-500">
+                                Viewing: <span className="font-bold text-[#801ED7]">{activeDataName}</span>. 
+                                Change view in 'Results' tab.
+                            </p>
                         </div>
                         <div className="flex gap-6 mt-4 md:mt-0">
-                            <div className="text-center p-2 bg-gray-50 rounded-lg">
-                                <p className="text-xs uppercase text-gray-400 font-bold">Train Accuracy</p>
-                                <p className="text-2xl font-bold text-[#FFA524]">{trainAcc}%</p>
-                            </div>
-                            <div className="text-center p-2 bg-gray-50 rounded-lg">
-                                <p className="text-xs uppercase text-gray-400 font-bold">Test Accuracy</p>
-                                <p className={`text-2xl font-bold ${parseFloat(testAcc) > 70 ? 'text-green-500' : 'text-[#801ED7]'}`}>
-                                    {testAcc}%
-                                </p>
-                            </div>
+                            {evaluationMode === 'Train' && (
+                                <div className="text-center p-2 bg-gray-50 rounded-lg min-w-[120px]">
+                                    <p className="text-xs uppercase text-gray-400 font-bold">Train Accuracy</p>
+                                    <p className="text-2xl font-bold text-[#FFA524]">{trainAcc}%</p>
+                                </div>
+                            )}
+                            
+                            {evaluationMode === 'Test' && (
+                                <>
+                                    <div className="text-center p-2 bg-gray-50 rounded-lg min-w-[120px] opacity-60">
+                                        <p className="text-xs uppercase text-gray-400 font-bold">Train Acc</p>
+                                        <p className="text-xl font-bold text-gray-500">{trainAcc}%</p>
+                                    </div>
+                                    <div className="text-center p-2 bg-blue-50 border border-blue-200 rounded-lg min-w-[120px]">
+                                        <p className="text-xs uppercase text-blue-500 font-bold">Test Accuracy</p>
+                                        <p className={`text-2xl font-bold ${parseFloat(testAcc) > 70 ? 'text-green-500' : 'text-[#801ED7]'}`}>
+                                            {testAcc}%
+                                        </p>
+                                    </div>
+                                    <div className={`text-center p-2 rounded-lg min-w-[120px] border ${parseFloat(accuracyDiff) < -10 ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`}>
+                                        <p className="text-xs uppercase text-gray-400 font-bold">Diff</p>
+                                        <p className={`text-2xl font-bold ${parseFloat(accuracyDiff) < -10 ? 'text-red-500' : 'text-gray-600'}`}>
+                                            {accuracyDiff > 0 ? '+' : ''}{accuracyDiff}%
+                                        </p>
+                                    </div>
+                                </>
+                            )}
                         </div>
                     </div>
 
-                     {isOverfitting && (
-                        <div className="mb-6 bg-red-50 border-l-4 border-red-400 text-red-700 px-4 py-3 rounded relative shadow-sm" role="alert">
-                            <strong className="font-bold">Warning: Overfitting!</strong>
-                            <span className="block sm:inline"> Your training score is much higher than your test score. This means your rules are memorizing the data rather than finding general patterns.</span>
-                        </div>
-                    )}
-
                     {/* Tree Visualizer */}
                     <div className="bg-slate-50 border border-gray-200 rounded-xl p-8 shadow-inner overflow-x-auto">
-                        <div className="flex flex-col items-center min-w-[900px]">
+                        <div className="flex flex-col items-center min-w-[1024px]">
                             
                             {/* Level 1: Root */}
                             <div className="z-10">
@@ -527,23 +550,26 @@
                                     config={config.root} 
                                     onChange={(c) => updateNode('root', c)} 
                                     nodeData={rootData}
-                                    description="All Training Passengers"
+                                    description={`All ${activeDataName}`}
                                 />
                             </div>
 
                             {/* Connectors L1 -> L2 */}
                             <div className="flex w-full justify-center h-16 relative">
-                                <div className="absolute top-0 bottom-0 border-l-2 border-dashed border-gray-300 left-1/2"></div>
-                                <div className="absolute top-1/2 w-[600px] border-t-2 border-dashed border-gray-300"></div>
-                                <div className="absolute top-1/2 left-[calc(50%-300px)] h-1/2 border-l-2 border-dashed border-gray-300"></div>
-                                <div className="absolute top-1/2 right-[calc(50%-300px)] h-1/2 border-r-2 border-dashed border-gray-300"></div>
+                                {/* Vertical line from Root */}
+                                <div className="absolute top-0 h-1/2 border-l-2 border-dashed border-gray-300 left-1/2"></div>
+                                {/* Horizontal Bar */}
+                                <div className="absolute top-1/2 w-[700px] border-t-2 border-dashed border-gray-300"></div>
+                                {/* Vertical lines to children */}
+                                <div className="absolute top-1/2 left-[calc(50%-350px)] h-1/2 border-l-2 border-dashed border-gray-300"></div>
+                                <div className="absolute top-1/2 right-[calc(50%-350px)] h-1/2 border-r-2 border-dashed border-gray-300"></div>
                                 
-                                <div className="absolute top-1/2 left-[calc(50%-150px)] -mt-3 bg-slate-50 px-2 text-xs text-green-600 font-bold">TRUE</div>
-                                <div className="absolute top-1/2 right-[calc(50%-150px)] -mt-3 bg-slate-50 px-2 text-xs text-red-600 font-bold">FALSE</div>
+                                <div className="absolute top-1/2 left-[calc(50%-175px)] -mt-3 bg-slate-50 px-2 text-xs text-green-600 font-bold">TRUE</div>
+                                <div className="absolute top-1/2 right-[calc(50%-175px)] -mt-3 bg-slate-50 px-2 text-xs text-red-600 font-bold">FALSE</div>
                             </div>
 
                             {/* Level 2: Branches */}
-                            <div className="flex justify-center gap-[100px] w-full">
+                            <div className="flex justify-center gap-[150px] w-full">
                                 {/* Left Branch (Root True) */}
                                 <div className="flex flex-col items-center">
                                     <NodeConfig 
@@ -554,7 +580,7 @@
                                         description={rootDesc}
                                     />
                                     {/* Connectors L2 -> L3 */}
-                                    <div className="h-12 w-[300px] relative mt-2">
+                                    <div className="h-12 w-[380px] relative mt-2">
                                         <div className="absolute top-0 h-6 left-1/2 border-l-2 border-dashed border-gray-300"></div>
                                         <div className="absolute top-6 w-full border-t-2 border-dashed border-gray-300"></div>
                                         <div className="absolute top-6 h-6 left-0 border-l-2 border-dashed border-gray-300"></div>
@@ -562,7 +588,7 @@
                                         <div className="absolute top-6 left-1/4 -mt-3 bg-slate-50 px-1 text-[10px] text-green-600 font-bold">TRUE</div>
                                         <div className="absolute top-6 right-1/4 -mt-3 bg-slate-50 px-1 text-[10px] text-red-600 font-bold">FALSE</div>
                                     </div>
-                                    <div className="flex justify-between w-[340px]">
+                                    <div className="flex justify-between w-[440px]">
                                         <LeafNode data={leftLeafTrueData} description={`${rootDesc} AND ${leftDesc}`} />
                                         <LeafNode data={leftLeafFalseData} description={`${rootDesc} AND NOT(${leftDesc})`} />
                                     </div>
@@ -578,7 +604,7 @@
                                         description={rootNotDesc}
                                     />
                                      {/* Connectors L2 -> L3 */}
-                                     <div className="h-12 w-[300px] relative mt-2">
+                                     <div className="h-12 w-[380px] relative mt-2">
                                         <div className="absolute top-0 h-6 left-1/2 border-l-2 border-dashed border-gray-300"></div>
                                         <div className="absolute top-6 w-full border-t-2 border-dashed border-gray-300"></div>
                                         <div className="absolute top-6 h-6 left-0 border-l-2 border-dashed border-gray-300"></div>
@@ -586,7 +612,7 @@
                                         <div className="absolute top-6 left-1/4 -mt-3 bg-slate-50 px-1 text-[10px] text-green-600 font-bold">TRUE</div>
                                         <div className="absolute top-6 right-1/4 -mt-3 bg-slate-50 px-1 text-[10px] text-red-600 font-bold">FALSE</div>
                                     </div>
-                                    <div className="flex justify-between w-[340px]">
+                                    <div className="flex justify-between w-[440px]">
                                         <LeafNode data={rightLeafTrueData} description={`${rootNotDesc} AND ${rightDesc}`} />
                                         <LeafNode data={rightLeafFalseData} description={`${rootNotDesc} AND NOT(${rightDesc})`} />
                                     </div>
@@ -599,22 +625,26 @@
             );
         };
 
-        const EnsembleView = ({ configs, data }) => {
+        const ResultsView = ({ configs, data, evaluationMode, setEvaluationMode }) => {
             const trainData = data.filter(d => d.Group === 'Train');
             const testData = data.filter(d => d.Group === 'Test');
             
+            // Choose data based on toggle
+            const activeData = evaluationMode === 'Test' ? testData : trainData;
+            const activeDataName = evaluationMode === 'Test' ? 'Test Data' : 'Training Data';
+
             // Calculate individual stats
             const stats = configs.map((cfg, idx) => {
                 let correct = 0;
-                testData.forEach(row => {
+                activeData.forEach(row => {
                     if (predictSingleTree(row, cfg, trainData) === row.Survived) correct++;
                 });
-                return { id: idx + 1, acc: (correct / testData.length * 100).toFixed(1) };
+                return { id: idx + 1, acc: (correct / activeData.length * 100).toFixed(1) };
             });
 
             // Calculate Ensemble Stats (Majority Vote)
             let ensembleCorrect = 0;
-            testData.forEach(row => {
+            activeData.forEach(row => {
                 const v1 = predictSingleTree(row, configs[0], trainData);
                 const v2 = predictSingleTree(row, configs[1], trainData);
                 const v3 = predictSingleTree(row, configs[2], trainData);
@@ -624,65 +654,60 @@
                 
                 if (prediction === row.Survived) ensembleCorrect++;
             });
-            const ensembleAcc = (ensembleCorrect / testData.length * 100).toFixed(1);
+            const ensembleAcc = (ensembleCorrect / activeData.length * 100).toFixed(1);
 
             return (
                 <div className="max-w-4xl mx-auto mt-10 p-6 animate-fade-in">
-                    <h2 className="text-3xl font-bold text-[#300266] mb-8 text-center">Ensemble Results</h2>
+                    <div className="flex justify-between items-center mb-8 border-b pb-4">
+                        <h2 className="text-3xl font-bold text-[#300266]">Results</h2>
+                        
+                        <div className="flex items-center gap-3 bg-white p-2 rounded-lg shadow-sm border">
+                            <span className={`text-sm font-bold ${evaluationMode === 'Train' ? 'text-[#801ED7]' : 'text-gray-400'}`}>Train Data</span>
+                            
+                            <label htmlFor="data-toggle" className="flex items-center cursor-pointer relative">
+                                <input 
+                                    type="checkbox" 
+                                    id="data-toggle" 
+                                    className="sr-only toggle-checkbox"
+                                    checked={evaluationMode === 'Test'}
+                                    onChange={(e) => setEvaluationMode(e.target.checked ? 'Test' : 'Train')}
+                                />
+                                <div className="w-14 h-7 bg-gray-300 rounded-full border-2 border-gray-300 toggle-label transition-colors"></div>
+                                <div className={`dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition-transform ${evaluationMode === 'Test' ? 'transform translate-x-7' : ''}`}></div>
+                            </label>
+                            
+                            <span className={`text-sm font-bold ${evaluationMode === 'Test' ? 'text-[#801ED7]' : 'text-gray-400'}`}>Test Data</span>
+                        </div>
+                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
                         {stats.map(s => (
                             <div key={s.id} className="bg-white p-6 rounded-xl shadow text-center border-t-4 border-[#FFA524]">
-                                <h3 className="text-gray-500 font-bold uppercase text-xs mb-2">Tree {s.id}</h3>
+                                <h3 className="text-gray-500 font-bold uppercase text-xs mb-2">Tree {s.id} ({activeDataName})</h3>
                                 <div className="text-3xl font-bold text-[#300266]">{s.acc}%</div>
                             </div>
                         ))}
                         <div className="bg-[#300266] p-6 rounded-xl shadow text-center border-t-4 border-[#FFA4FB] transform scale-105">
-                            <h3 className="text-[#FFA4FB] font-bold uppercase text-xs mb-2">Combined Model</h3>
+                            <h3 className="text-[#FFA4FB] font-bold uppercase text-xs mb-2">Combined ({activeDataName})</h3>
                             <div className="text-3xl font-bold text-white">{ensembleAcc}%</div>
                         </div>
                     </div>
 
                     <div className="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 className="font-bold text-xl mb-4 text-[#300266]">Why Ensemble?</h3>
+                        <h3 className="font-bold text-xl mb-4 text-[#300266]">Evaluation Mode</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                            In a single decision tree, errors can happen due to noise or specific biases in that tree's rules. 
-                            By combining the votes of three different trees, we smooth out these errors. If Tree 1 and Tree 2 say "Survive" but Tree 3 says "Die", the majority vote (Survive) often corrects the mistake.
-                            This is the core concept behind <strong>Random Forests</strong> and <strong>Gradient Boosting</strong>.
+                            {evaluationMode === 'Train' 
+                                ? "You are currently viewing accuracy on the TRAINING data. This is the data used to build the trees. To see how well your model generalizes to new people it hasn't seen before, toggle the switch above to TEST."
+                                : "You are currently viewing accuracy on the TEST data. This is the true test of your model! If these numbers are significantly lower than your Train numbers, you might be overfitting (memorizing) the data."
+                            }
                         </p>
                         
-                        <div className="space-y-4">
-                            <div>
-                                <div className="flex justify-between text-xs font-bold uppercase text-gray-400 mb-1">
-                                    <span>Single Tree Average</span>
-                                    <span>Goal: 70%+</span>
-                                </div>
-                                <div className="h-4 w-full bg-gray-100 rounded-full overflow-hidden">
-                                    <div 
-                                        className="bg-gray-400 h-full transition-all duration-1000" 
-                                        style={{ width: `${stats[0].acc}%` }} 
-                                    ></div>
-                                </div>
+                        {evaluationMode === 'Test' && (
+                             <div className="mt-6 text-sm text-center text-gray-700 bg-green-50 p-4 rounded-lg border border-green-200">
+                                <i className="fas fa-check-circle text-green-500 mr-2"></i>
+                                <strong>Great!</strong> Now that you are in Test mode, go back to the Tree tabs to see exactly where your model loses accuracy compared to training.
                             </div>
-
-                            <div>
-                                <div className="flex justify-between text-xs font-bold uppercase text-[#801ED7] mb-1">
-                                    <span>Ensemble Accuracy</span>
-                                    <span>{ensembleAcc}%</span>
-                                </div>
-                                <div className="h-4 w-full bg-gray-100 rounded-full overflow-hidden">
-                                    <div 
-                                        className="braze-gradient-bg h-full transition-all duration-1000" 
-                                        style={{ width: `${ensembleAcc}%` }} 
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="mt-6 text-sm text-center text-gray-500 bg-gray-50 p-4 rounded-lg">
-                             <i className="fas fa-lightbulb text-[#FFA524] mr-2"></i>
-                             <strong>Strategy Tip:</strong> If your Combined Score is lower than your best tree, try to make your trees more different from each other! Use different variables for the root splits.
-                        </div>
+                        )}
                     </div>
                 </div>
             );
@@ -693,6 +718,9 @@
             const [data, setData] = useState([]);
             const [loading, setLoading] = useState(true);
             const [error, setError] = useState(null);
+            
+            // 'Train' or 'Test'
+            const [evaluationMode, setEvaluationMode] = useState('Train');
             
             // Load Data on Mount
             useEffect(() => {
@@ -709,13 +737,13 @@
                             skipEmptyLines: true,
                             dynamicTyping: true, // Automatically converts numbers
                             complete: (results) => {
-                                // Transform keys to match App expectations if necessary
                                 // CSV Headers: PassengerId, Survived, TicketClass, Name, Sex, Age, SibSp, ParCh, Fare, Embarked, Title, Train/Test Group
-                                // App Expects: id, Survived, Pclass, Sex, Age, SibSp, Fare, Embarked, Group
                                 const transformed = results.data.map(row => ({
                                     id: row['PassengerId'],
                                     Survived: row['Survived'],
                                     Pclass: row['TicketClass'],
+                                    Name: row['Name'],
+                                    Title: row['Title'],
                                     Sex: row['Sex'],
                                     Age: row['Age'],
                                     SibSp: row['SibSp'],
@@ -794,6 +822,7 @@
                                 config={tree1} 
                                 setConfig={setTree1} 
                                 data={data} 
+                                evaluationMode={evaluationMode}
                             />
                         )}
                         
@@ -803,6 +832,7 @@
                                 config={tree2} 
                                 setConfig={setTree2} 
                                 data={data} 
+                                evaluationMode={evaluationMode}
                             />
                         )}
                         
@@ -812,26 +842,29 @@
                                 config={tree3} 
                                 setConfig={setTree3} 
                                 data={data} 
+                                evaluationMode={evaluationMode}
                             />
                         )}
 
-                        {activeTab === 'Ensemble' && (
-                            <EnsembleView 
+                        {activeTab === 'Results' && (
+                            <ResultsView 
                                 configs={[tree1, tree2, tree3]} 
                                 data={data} 
+                                evaluationMode={evaluationMode}
+                                setEvaluationMode={setEvaluationMode}
                             />
                         )}
                     </main>
 
-                    {activeTab !== 'Intro' && activeTab !== 'Ensemble' && activeTab !== 'Data' && (
+                    {activeTab !== 'Intro' && activeTab !== 'Results' && activeTab !== 'Data' && (
                         <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-4 flex justify-between items-center shadow-lg z-50">
                             <div className="text-sm text-gray-500 hidden md:block">
-                                <span className="font-bold text-[#801ED7]">Goal:</span> Tweak the splits to maximize accuracy without overfitting.
+                                <span className="font-bold text-[#801ED7]">Goal:</span> Tweak the splits to maximize accuracy. Check "Results" to see Test data.
                             </div>
                             <div className="flex gap-2 w-full md:w-auto">
                                 <button 
                                     onClick={() => {
-                                        const tabs = ['Tree 1', 'Tree 2', 'Tree 3', 'Ensemble'];
+                                        const tabs = ['Tree 1', 'Tree 2', 'Tree 3', 'Results'];
                                         const idx = tabs.indexOf(activeTab);
                                         if(idx > 0) setActiveTab(tabs[idx-1]);
                                     }}
@@ -841,7 +874,7 @@
                                 </button>
                                 <button 
                                     onClick={() => {
-                                        const tabs = ['Tree 1', 'Tree 2', 'Tree 3', 'Ensemble'];
+                                        const tabs = ['Tree 1', 'Tree 2', 'Tree 3', 'Results'];
                                         const idx = tabs.indexOf(activeTab);
                                         if(idx < tabs.length - 1) setActiveTab(tabs[idx+1]);
                                     }}
